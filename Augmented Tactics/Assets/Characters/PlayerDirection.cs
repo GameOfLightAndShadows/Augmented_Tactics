@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum PlayerDirection : MonoBehaviour {
+public enum PlayerDirection {
 	Right=1, 
 	Left=2,
 	Up=4,

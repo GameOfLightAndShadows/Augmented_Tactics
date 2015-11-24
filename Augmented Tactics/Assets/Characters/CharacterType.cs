@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CharacterType : MonoBehaviour {
+public enum CharacterType  {
 	Archer=1,
 	AiArcher=2,
 	Assassin=3,
