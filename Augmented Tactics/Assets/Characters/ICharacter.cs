@@ -12,7 +12,6 @@ public interface ICharacter  {
 	CharacterType CharacterType { get; set; }
 	//Cell CurrentCoordinates { get; set; }
 	//Cell OldCoordinates { get; set; }
-	bool IsDead { get; set; }
 	int[] Position { get; set; }
 	Animator Animator { get; set; }
 

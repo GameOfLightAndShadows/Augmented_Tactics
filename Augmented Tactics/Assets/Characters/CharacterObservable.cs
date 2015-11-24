@@ -14,7 +14,6 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable 
 	public List<ICharacter> TeamMembers { get; set; }
 	public int MovementPoints { get; set; }
 	public PlayerDirection Direction { get; set; }
-	public bool IsDead { get; set; }
 	public int[] Position { get; set; } // [0]=x, [1]=y
 	public Animator Animator { get; set; }
 	public CharacterType CharacterType { get; set; }
