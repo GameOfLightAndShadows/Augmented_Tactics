@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class ICharacter  {
 
-	CharacterStats BaseStats { get; set; }
+	CharacterStats Stats { get; set; }
 	Health Health { get; set; }
 	List<ICharacter> CurrentEnnemies { get; set; }
 	List<ICharacter> TeamMembers { get; set; }
