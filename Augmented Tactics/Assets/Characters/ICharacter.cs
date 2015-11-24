@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-public class ICharacter  {
+public interface ICharacter  {
 
 	CharacterStats Stats { get; set; }
 	Health Health { get; set; }
@@ -10,8 +10,8 @@ public class ICharacter  {
 	int MovementPoints { get; set; }
 	PlayerDirection Direction { get; set; }
 	CharacterType CharacterType { get; set; }
-	Cell CurrentCoordinates { get; set; }
-	Cell OldCoordinates { get; set; }
+	//Cell CurrentCoordinates { get; set; }
+	//Cell OldCoordinates { get; set; }
 	bool IsDead { get; set; }
 	int[] Position { get; set; }
 	Animator Animator { get; set; }
