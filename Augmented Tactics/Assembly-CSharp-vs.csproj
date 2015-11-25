@@ -55,6 +55,10 @@
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalSwordsman.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalWizard.cs" />
      <Compile Include="Assets\Artificial Intelligence\Command Sequences\ChoiceSelector.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Command Sequences\ClosestTargetCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Command Sequences\DefensiveCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Command Sequences\HealerNeededCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Command Sequences\OffensiveCommandSequence.cs" />
      <Compile Include="Assets\Characters\Character Builder\CharacterBuilder.cs" />
      <Compile Include="Assets\Characters\Character Builder\ICharacterBuilder.cs" />
      <Compile Include="Assets\Characters\CharacterBase.cs" />
