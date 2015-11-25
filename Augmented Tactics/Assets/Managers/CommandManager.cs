@@ -26,14 +26,14 @@ public class CommandManager : MonoBehaviour {
 		CommandStack = new Stack();
 	}
 	
-	public void SetCurrent(ICharacter current = null)
+	public void SetCurrent(ICharacter current)
 	{
 		CurrentCharater = current;
 	}
 	
 	
 	//TODO: Update method's signature
-	public void Undo(ICharacter caller, ICharacter active)
+	public void Undo(CharacterObservable caller, CharacterObservable active)
 	{
 		if(!Equals(caller, active))
 			throw new Exception("Cannot Undo on non-active character");
@@ -42,7 +42,7 @@ public class CommandManager : MonoBehaviour {
 		if (PreviousAction is AttackCommand && LastCharacterAttacked != null)
 		{
 			var attackStrenght = caller.Stats.GetAttackStrenght(caller, LastCharacterAttacked);
-			LastCharacterAttacked.Health.RaiseHealth(attackStrenght);
+			LastCharacterAttacked.Health.RaiseHealth(caller);
 			LastCharacterAttacked.healthWasRaised = true;
 			LastCharacterAttacked.Notify();
 			LastCharacterAttacked.healthWasRaised = false;
@@ -71,30 +71,30 @@ public class CommandManager : MonoBehaviour {
 		}
 	}
 	
-	public void Undo(ICharacter caller, ICharacter personaeToInteracWith = null, GameManager gm =null)
+	public void Undo(CharacterObservable caller, CharacterObservable personaeToInteracWith, GameManager gm)
 	{
 		
 		PreviousAction = (ICharacterActionCommand)CommandStack.Pop();
 		
 		if (PreviousAction is AttackCommand && LastCharacterAttacked!= null)
 		{
-			var attackStrenght = caller.BaseStats.GetAttackStrenght(caller, LastCharacterAttacked);
-			LastCharacterAttacked.Health.RestoreHealth(attackStrenght);
+			var attackStrenght = caller.Stats.GetAttackStrenght(caller, LastCharacterAttacked);
+			LastCharacterAttacked.Health.RaiseHealth(caller);
 			((AttackCommand)PreviousAction).IsExecuted = false;
 			return;
 		}
 		if (PreviousAction is DefendCommand)
 		{
-			caller.BaseStats.DefenseBonusActivated = false;
-			caller.BaseStats.ResetTemporaryBonus();
+			caller.Stats.DefenseBonusActivated = false;
+			caller.Stats.ResetTemporaryBonus();
 			((DefendCommand)PreviousAction).IsExecuted = false;
 			return;
 		}
 		if (PreviousAction is MoveCommand)
 		{
-			caller.CurrentCoordinates = caller.OldCoordinates;
-			((MoveCommand)PreviousAction).Execute(caller.CurrentCoordinates);
-			((MoveCommand)PreviousAction).IsExecuted = false;
+			//caller.CurrentCoordinates = caller.OldCoordinates;
+			//((MoveCommand)PreviousAction).Execute(caller.CurrentCoordinates);
+			//((MoveCommand)PreviousAction).IsExecuted = false;
 			
 		}
 		PreviousAction.Execute(caller);

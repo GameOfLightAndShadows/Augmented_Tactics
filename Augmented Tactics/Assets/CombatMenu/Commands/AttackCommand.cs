@@ -9,7 +9,7 @@ public class AttackCommand : CharacterAction {
 	}
 
 	
-	public new void Execute(ICharacter caller, ICharacter characterToAttack)
+	public new void Execute(CharacterObservable caller, CharacterObservable characterToAttack)
 	{
 		if (caller == null)
 			throw new ArgumentException();
@@ -37,7 +37,7 @@ public class AttackCommand : CharacterAction {
 		else
 		{
 			var attackStrenght = caller.Stats.GetAttackStrenght(caller, Target);
-			Target.Health.TakeDamageFromCharacter(attackStrenght);
+			Target.Health.TakeDamageFromCharacter(caller);
 		}
 		Target.Notify(); // Single cal of notify here will either restore health, reduce health or make so that the manager call Death animation and destroy game object
 		IsExecuted = true;
