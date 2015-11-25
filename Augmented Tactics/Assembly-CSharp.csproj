@@ -65,6 +65,9 @@
      <Compile Include="Assets\Characters\ICharacter.cs" />
      <Compile Include="Assets\Characters\IStats.cs" />
      <Compile Include="Assets\Characters\PlayerDirection.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\GameActions.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\ICharacterActionCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\IReceiver.cs" />
      <Compile Include="Assets\Managers\GameManager.cs" />
      <Compile Include="Assets\Managers\HealthManager.cs" />
      <Compile Include="Assets\Observers\ICharacterObservable.cs" />
