@@ -48,8 +48,55 @@ public class CharacterBuilder : ICharacterBuilder {
 		_character.Attach (_hm);
 		return this;
 	}
-	CharacterBuilder WithStats();
-	CharacterBuilder WithType(int type)
+	public CharacterBuilder WithStats()
+	{
+		if (_character.GetType() == typeof(Archer))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2450, 260, 180, 100, 120, 0, 40, 22);
+			
+			return this;
+		}
+		if (_character.GetType() == typeof(Assassin))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2380, 295, 225, 145, 150, 0, 65, 18);
+			return this;
+		}
+		if (_character.GetType() == typeof(BattleWizard))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2520, 225, 210, 85, 90, 140, 110, 25);
+			return this;
+		}
+		
+		if (_character.GetType() == typeof(Healer))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2180, 175, 140, 80, 95, 80, 100, 16);
+			return this;
+		}
+		if (_character.GetType() == typeof(Knight))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2760, 310, 260, 65, 80, 0, 75, 13);
+			return this;
+		}
+		
+		if (_character.GetType() == typeof(Swordsman))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2630, 300, 235, 70, 85, 0, 70, 15);
+			return this;
+		}
+		if (_character.GetType() == typeof(Wizard))
+		{
+			_stats = new CharacterStats();
+			_stats.StatGeneration(2380, 215, 170, 90, 90, 240, 160, 23);
+			return this;
+		}
+		return this;
+	}	CharacterBuilder WithType(int type)
 	{
 		_character.CharacterType = (CharacterType)type;
 		return this;
