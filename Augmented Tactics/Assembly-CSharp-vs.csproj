@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBase.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalArcher.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalAssassin.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalBattleWizard.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalHealer.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalKnight.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalSwordsman.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalWizard.cs" />
      <Compile Include="Assets\Artificial Intelligence\Command Sequences\ChoiceSelector.cs" />
      <Compile Include="Assets\Characters\Character Builder\CharacterBuilder.cs" />
      <Compile Include="Assets\Characters\Character Builder\ICharacterBuilder.cs" />
