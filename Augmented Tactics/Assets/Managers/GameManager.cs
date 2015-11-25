@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class GameManager : ICharacterObserver {
 	private int _indexOfCharacters;
-	public List<ICharacter> GameCharacters;
-	public ICharacter ActivePlayer;
+	public List<CharacterObservable> GameCharacters;
+	public CharacterObservable ActivePlayer;
 
 	public void GoToNextCharacter()
 	{
