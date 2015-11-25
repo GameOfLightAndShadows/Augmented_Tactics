@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CharacterStats : MonoBehaviour {
 
@@ -14,7 +15,7 @@ public class CharacterStats : MonoBehaviour {
 	public float Luck { get;  set; }
 	public int CriticalStrikeCounter = 20;
 	public int TemporaryDefenseBonusValue;
-	public Random RandomValueGenerator { get; set; }
+	public System.Random RandomValueGenerator { get; set; }
 	public bool DefenseBonusActivated = false;
 	
 	public IStats StatGeneration(float h, float p, float d, float a, float s, float mp, float mr, float l)
@@ -27,7 +28,8 @@ public class CharacterStats : MonoBehaviour {
 		MagicResist = mr;
 		Luck = l;
 		HealthPoints = h;
-		RandomValueGenerator = new Random();
+		RandomValueGenerator = new System.Random();
+		return (IStats)this;
 	}
 	
 	public void AjustCriticalStrikeChances()
@@ -86,7 +88,7 @@ public class CharacterStats : MonoBehaviour {
 		var power = (fst is BattleWizard || fst is Wizard)
 			? (int) (fStats.MagicPower+fStats.Power)
 				: (int) fStats.Power;
-		var defense = (snd.BaseStats.DefenseBonusActivated)
+		var defense = (snd.Stats.DefenseBonusActivated)
 			? (int)sStats.Defense + sStats.TemporaryDefenseBonusValue
 				: (int)sStats.Defense;
 		if (fst is BattleWizard || fst is Wizard)

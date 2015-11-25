@@ -18,7 +18,7 @@ public class CharacterBase : CharacterObservable {
 	public Animator Animator { get; set; }
 
 
-	public override bool CanDoExtraDamage()
+	public bool CanDoExtraDamage()
 	{
 		if (BaseStats.ChanceForCriticalStrike * BaseStats.Luck < 50) return false;
 		BaseStats.CriticalStrikeCounter--;
@@ -27,18 +27,11 @@ public class CharacterBase : CharacterObservable {
 		return true;
 	}
 
-	public override void CheckIfCharacterDead()
-	{
-		if (IsDead && Health.CurrentHealth > 0) IsDead = false;
-		if (Health.CurrentHealth == 0) IsDead = true;
-	}
-
 	public override bool Equals(object obj)
 	{
 		var that = (CharacterBase)obj;
 		return  ReferenceEquals(this,that) &&
 			    GetType() == that.GetType() &&
-				IsDead == that.IsDead &&
 				Health.CurrentHealth == that.Health.CurrentHealth &&
 				Health.MaxHealth == that.Health.MaxHealth &&
 				BaseStats == that.BaseStats;

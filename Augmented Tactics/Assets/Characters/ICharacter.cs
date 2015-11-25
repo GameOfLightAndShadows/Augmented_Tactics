@@ -15,7 +15,4 @@ public interface ICharacter  {
 	int[] Position { get; set; }
 	Animator Animator { get; set; }
 
-	void CheckIfCharacterDead();
-	bool CanDoExtraDamage();
-
 }

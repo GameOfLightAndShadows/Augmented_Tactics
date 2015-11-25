@@ -19,7 +19,7 @@ public class Health {
 	}
 	public int MaxHealth { get; set; }
 	public bool IsDead { get; set; }
-	public event EventHandler<HealthChangedEventArgs> HealthChanged;
+//	public event EventHandler<HealthChangedEventArgs> HealthChanged;
 	
 	public Health(int lf)
 	{
@@ -45,7 +45,7 @@ public class Health {
 	
 	public void TakeDamageFromCharacter(CharacterObservable observable)
 	{
-		CurrentHealth -= (int)obsevable.Stats.Power;
+		CurrentHealth -= (int)observable.Stats.Power;
 		if (CurrentHealth <= 0)
 			IsDead = true;
 	}
@@ -53,7 +53,7 @@ public class Health {
 	public void RaiseHealth(CharacterObservable observable)
 	{
 		if (!IsDead) {
-			CurrentHealth += observable.Stats.MagicPower;
+			CurrentHealth += (int)observable.Stats.MagicPower;
 			CapHealth ();
 		}
 	}

@@ -1,7 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+public class GameManager : ICharacterObserver {
 
-public class GameManager : MonoBehaviour {
+	public void UpdateObserver(CharacterObservable character)
+	{
+		throw new NotImplementedException ();
+	}
 
 	// Use this for initialization
 	void Start () {

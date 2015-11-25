@@ -8,7 +8,7 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable 
 	public CharacterRole CharacterRole;
 	public bool isDamage;
 	public bool healthWasRaised;
-	public CharacterStats BaseStats { get; set; }
+	public CharacterStats Stats { get; set; }
 	public Health Health { get; set; }
 	public List<ICharacter> CurrentEnnemies { get; set; }
 	public List<ICharacter> TeamMembers { get; set; }
@@ -17,11 +17,6 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable 
 	public int[] Position { get; set; } // [0]=x, [1]=y
 	public Animator Animator { get; set; }
 	public CharacterType CharacterType { get; set; }
-	//public Cell CurrentCoordinates { get; set; }
-	//public Cell OldCoordinates { get; set; }
-	
-	public abstract bool CanDoExtraDamage();
-	public abstract void CheckIfCharacterDead();
 
 
 	public void Attach(ICharacterObserver observer)
