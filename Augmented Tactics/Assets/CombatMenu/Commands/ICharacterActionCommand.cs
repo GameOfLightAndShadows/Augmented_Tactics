@@ -5,7 +5,7 @@ public interface ICharacterActionCommand  {
 	IReceiver Receiver { get; set; }
 	bool IsExecuted { get; set; }
 	
-	void Execute(ICharacter caller);
-	void Execute(ICharacter caller, ICharacter characterToAttack);
-	void Execute(ICharacter caller, int raiseDefense);
+	void Execute(CharacterObservable caller);
+	void Execute(CharacterObservable caller, CharacterObservable characterToAttack);
+	void Execute(CharacterObservable caller, int raiseDefense);
 }

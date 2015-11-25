@@ -1,15 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class DefendCommand : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+using System;
+public class DefendCommand : CharacterAction {
 	
+	public DefendCommand(IReceiver receiver) : base(receiver)
+	{
+		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	public new void Execute(CharacterObservable caller)
+	{
+		if(caller == null)
+			throw new ArgumentException();
+		if(caller.Stats == null)
+			throw new Exception();
+		if (caller.Stats.DefenseBonusActivated)
+			return;
+		Receiver.SetUserAction(GameActions.DefendAction);
+		caller.Stats.Defense += caller.Stats.DetermineDefenseBonusForTurn();
+		caller.Stats.DefenseBonusActivated = true;
+		IsExecuted = true;
 	}
 }
