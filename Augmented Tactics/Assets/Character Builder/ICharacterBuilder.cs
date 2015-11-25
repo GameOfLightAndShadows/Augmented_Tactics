@@ -2,7 +2,6 @@
 using System.Collections;
 
 public interface ICharacterBuilder {
-	CharacterBuilder WithDirection(int direction);
 	CharacterBuilder CreateCharacterBuilder(GameManager gm, HealthManager hm);
 	CharacterBuilder WithDirection(int direction);
 	CharacterBuilder WithHealth();
