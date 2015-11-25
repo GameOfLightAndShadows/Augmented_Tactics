@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+public class SkipCommand : CharacterAction {
 
-public class SkipCommand : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
+	public SkipCommand(IReceiver receiver) : base(receiver)
+	{
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void Execute(ICharacter caller, GameManager manager)
+	{
+		Receiver.SetUserAction(GameActions.SkipAction);
+		if (caller == null)
+			throw new ArgumentException();
+		if (manager == null)
+			throw new ArgumentException();
+		manager.GoToNextCharacter();
 	}
 }
