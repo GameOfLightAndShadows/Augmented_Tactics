@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public abstract class DefensiveCommandSequence : ICommandAction {
+using System.Collections.Generic; 
+public abstract class DefensiveCommandSequence : CommandSequence {
 
 }
