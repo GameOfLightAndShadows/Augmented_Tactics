@@ -50,6 +50,7 @@
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ClosestTargetCommandSequence.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\DefensiveCommandSequence.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\HealerNeededCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ICommandAction.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\OffensiveCommandSequence.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBase.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalArcher.cs" />

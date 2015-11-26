@@ -1,15 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DefensiveCommandSequence : MonoBehaviour {
+public abstract class DefensiveCommandSequence : ICommandAction {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
