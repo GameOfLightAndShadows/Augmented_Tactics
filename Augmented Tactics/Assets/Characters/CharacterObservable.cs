@@ -17,7 +17,8 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable 
 	public int[] Position { get; set; } // [0]=x, [1]=y
 	public Animator Animator { get; set; }
 	public CharacterType CharacterType { get; set; }
-
+	public Cell CurrentCoordinates { get; set; }
+	public Cell OldCoordinates { get; set; }
 
 	public void Attach(ICharacterObserver observer)
 	{

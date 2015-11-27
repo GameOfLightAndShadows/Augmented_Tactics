@@ -6,8 +6,6 @@ using Random = System.Random;
 using System.Linq;
 
 public class CharacterBase : CharacterObservable {
-	public Cell CurrentCoordinates { get; set; }
-	public Cell OldCoordinates { get; set; }
 	
 	public bool CanDoExtraDamage()
 	{
