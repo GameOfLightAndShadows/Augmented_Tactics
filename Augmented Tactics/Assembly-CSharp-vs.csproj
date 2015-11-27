@@ -61,6 +61,7 @@
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalKnight.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalSwordsman.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalWizard.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Map Intelligence\AStarPathfinder.cs" />
      <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Cell.cs" />
      <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Node.cs" />
      <Compile Include="Assets\Characters\Character Builder\CharacterBuilder.cs" />
