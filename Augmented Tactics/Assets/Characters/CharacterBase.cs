@@ -12,8 +12,8 @@ public class CharacterBase : CharacterObservable {
 	public List<ICharacter> TeamMembers { get; set; }
 	public int MovementPoints { get; set; }
 	public PlayerDirection Direction { get; set; }
-//	public Cell CurrentCoordinates { get; set; }
-//	public Cell OldCoordinates { get; set; }
+	public Cell CurrentCoordinates { get; set; }
+	public Cell OldCoordinates { get; set; }
 	public int[] Position { get; set; } // [0]=x, [1]=y
 	public Animator Animator { get; set; }
 
@@ -42,7 +42,7 @@ public class CharacterBase : CharacterObservable {
 		if (isDamage || healthWasRaised)
 		{
 			//TODO: Type should be HealthManager
-			foreach (var o in ObserversList.OfType<ICharacterObserver>())
+			foreach (var o in ObserversList.OfType<HealthManager>())
 			{
 				o.UpdateObserver(this);
 			}
@@ -51,7 +51,7 @@ public class CharacterBase : CharacterObservable {
 		if (Health.IsDead)
 		{
 			//TODO: Type should be GameManager
-			foreach (var o in ObserversList.OfType<ICharacterObserver>())
+			foreach (var o in ObserversList.OfType<GameManager>())
 			{
 				o.UpdateObserver(this);
 			}
