@@ -6,24 +6,15 @@ using Random = System.Random;
 using System.Linq;
 
 public class CharacterBase : CharacterObservable {
-	public CharacterStats BaseStats { get; set; }
-	public Health Health { get; set; }
-	public List<ICharacter> CurrentEnnemies { get; set; }
-	public List<ICharacter> TeamMembers { get; set; }
-	public int MovementPoints { get; set; }
-	public PlayerDirection Direction { get; set; }
 	public Cell CurrentCoordinates { get; set; }
 	public Cell OldCoordinates { get; set; }
-	public int[] Position { get; set; } // [0]=x, [1]=y
-	public Animator Animator { get; set; }
-
-
+	
 	public bool CanDoExtraDamage()
 	{
-		if (BaseStats.ChanceForCriticalStrike * BaseStats.Luck < 50) return false;
-		BaseStats.CriticalStrikeCounter--;
-		BaseStats.ChanceForCriticalStrike = new Random().Next(0, BaseStats.CriticalStrikeCounter);
-		BaseStats.AjustCriticalStrikeChances();
+		if (Stats.ChanceForCriticalStrike * Stats.Luck < 50) return false;
+		Stats.CriticalStrikeCounter--;
+		Stats.ChanceForCriticalStrike = new Random().Next(0, Stats.CriticalStrikeCounter);
+		Stats.AjustCriticalStrikeChances();
 		return true;
 	}
 
@@ -34,14 +25,13 @@ public class CharacterBase : CharacterObservable {
 			    GetType() == that.GetType() &&
 				Health.CurrentHealth == that.Health.CurrentHealth &&
 				Health.MaxHealth == that.Health.MaxHealth &&
-				BaseStats == that.BaseStats;
+				Stats == that.Stats;
 	}
 
 	public override void Notify()
 	{
 		if (isDamage || healthWasRaised)
 		{
-			//TODO: Type should be HealthManager
 			foreach (var o in ObserversList.OfType<HealthManager>())
 			{
 				o.UpdateObserver(this);
@@ -50,7 +40,6 @@ public class CharacterBase : CharacterObservable {
 		
 		if (Health.IsDead)
 		{
-			//TODO: Type should be GameManager
 			foreach (var o in ObserversList.OfType<GameManager>())
 			{
 				o.UpdateObserver(this);
