@@ -97,6 +97,8 @@
      <Compile Include="Assets\Managers\CommandManager.cs" />
      <Compile Include="Assets\Managers\GameManager.cs" />
      <Compile Include="Assets\Managers\HealthManager.cs" />
+     <Compile Include="Assets\Map\GameMap.cs" />
+     <Compile Include="Assets\Map\GameMapExtensions.cs" />
      <Compile Include="Assets\Observers\ICharacterObservable.cs" />
      <Compile Include="Assets\Observers\ICharacterObserver.cs" />
  <Reference Include="UnityEngine.UI">
