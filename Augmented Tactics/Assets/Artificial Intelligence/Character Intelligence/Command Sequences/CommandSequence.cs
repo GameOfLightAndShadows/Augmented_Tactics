@@ -18,12 +18,12 @@ public abstract class CommandSequence : ICommandAction {
 		throw new NotImplementedException ();
 	}
 
-	public bool IsFacingCharacter(ICharacter self, ICharacter target)
+	public bool IsFacingCharacter(CharacterObservable self, CharacterObservable target)
 	{
 		return Math.Abs (self.Direction - target.Direction) == 1;
 	}
 
-	public void RotateTowardsCharacter(ICharacter character)
+	public void RotateTowardsCharacter(CharacterObservable character)
 	{
 		throw new NotImplementedException ();
 	}
@@ -31,7 +31,7 @@ public abstract class CommandSequence : ICommandAction {
 
 	#region Abstract Methods
 	public abstract List<Action> MakeCommandSequence();
-	public abstract void MoveTowardsCharacter(ICharacter character);
+	public abstract void MoveTowardsCharacter(CharacterObservable character);
 	public abstract void EvaluateCommandSequence();
 	#endregion Abstract Methods
 
