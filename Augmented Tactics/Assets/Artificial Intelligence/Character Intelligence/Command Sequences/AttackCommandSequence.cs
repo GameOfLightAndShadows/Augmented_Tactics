@@ -27,7 +27,7 @@ public abstract class AttackCommandSequence : CommandSequence
 
     private float GetIncreaseTemporaryStrength(float strength)
     {
-        return strength * 0.25f;
+        return strength * 0.15f;
     }
 
     private void HarmCharacter(CharacterObservable human)
@@ -52,22 +52,5 @@ public abstract class AttackCommandSequence : CommandSequence
             : human.Stats.Defense);
     }
 
-    private void SelectTarget(params CharacterObservable[] humans)
-    {
-        var observableAsEnemy = (EnemyBase)Observable;
-        var pathfinder = observableAsEnemy.PathFinder;
-        var closestCharacter = humans[0];
-        pathfinder.FindPath(Observable.CurrentCoordinates, humans[0].CurrentCoordinates, observableAsEnemy.Map.CellGameMap, false);
-        var minCost = pathfinder.FinalPath.Count;
-        var targets = humans.ToList().Skip(1);
-        foreach (var target in targets)
-        {
-            pathfinder.FindPath(observableAsEnemy.CurrentCoordinates, target.CurrentCoordinates, observableAsEnemy.Map.CellGameMap, false);
-            if (pathfinder.FinalPath.Count < minCost)
-            {
-                closestCharacter = target;
-            }
-        }
-        observableAsEnemy.Target = (CharacterBase)closestCharacter;
-    }
+    public abstract CharacterObservable SelectTarget();
 }

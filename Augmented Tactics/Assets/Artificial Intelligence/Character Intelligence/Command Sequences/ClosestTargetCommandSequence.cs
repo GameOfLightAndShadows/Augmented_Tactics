@@ -1,15 +1,23 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+public class ClosestTargetCommandSequence : AttackCommandSequence {
 
-public class ClosestTargetCommandSequence : MonoBehaviour {
+    private List<Action> _closestEnemyToAttackSequence;
+    private int _closestEnemyToAttackRating;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public override List<Action> MakeCommandSequence()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void MoveTowardsCharacter(CharacterObservable character)
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void EvaluateCommandSequence()
+    {
+        throw new NotImplementedException();
+    }
 }
