@@ -45,6 +45,18 @@ public abstract class AttackCommandSequence : CommandSequence
         human.Notify();
     }
 
+
+    protected bool IsFacingPlayer(ICharacter human)
+    {
+        return Math.Abs(Observable.Direction - human.Direction) == 1;
+    }
+
+    protected bool IsInsideAttackRange(CharacterObservable bs)
+    {
+        var enemyObservable = (EnemyBase)Observable;
+        return enemyObservable.Map.IsInRange(enemyObservable, bs);
+    }
+
     private int CalculateDamageReduction(CharacterObservable human)
     {
         return (int)(human.IsOfTypeWizard()
@@ -52,5 +64,5 @@ public abstract class AttackCommandSequence : CommandSequence
             : human.Stats.Defense);
     }
 
-    public abstract CharacterObservable SelectTarget();
+    public abstract void SelectTarget(CharacterObservable[] humans);
 }
