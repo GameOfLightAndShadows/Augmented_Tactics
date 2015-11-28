@@ -154,7 +154,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
                 _closestEnemyToAttackRating += 25;
         }
 
-        private new void SelectTarget(CharacterObservable[] humans)
+        public override void SelectTarget(CharacterObservable[] humans)
         {
             var observableAsEnemy = (EnemyBase)Observable;
             var pathfinder = observableAsEnemy.PathFinder;

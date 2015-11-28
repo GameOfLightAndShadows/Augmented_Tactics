@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
-using System;
-
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System; 
+using System.Linq;
 public abstract class DefensiveCommandSequence : CommandSequence {
 	public CharacterObservable Observable { get; set; }
 	protected Dictionary<List<Action>, int> CommandSequenceDictionary;

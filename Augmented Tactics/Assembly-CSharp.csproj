@@ -54,6 +54,7 @@
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\HealerNeededCommandSequence.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ICommandAction.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBase.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBaseExtensions.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalArcher.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalAssassin.cs" />
      <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalBattleWizard.cs" />

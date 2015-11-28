@@ -3,10 +3,14 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-public class GameManager : ICharacterObserver {
+public class GameManager :MonoBehaviour, ICharacterObserver {
 	private int _indexOfCharacters;
 	public List<CharacterObservable> GameCharacters;
 	public CharacterObservable ActivePlayer;
+	public GameMap GameMap;
+	public GameObject CellPrefab;
+	public List<List<Cell>> map;
+	public int mapSize=32;
 
 	public void GoToNextCharacter()
 	{
@@ -19,10 +23,26 @@ public class GameManager : ICharacterObserver {
 		throw new NotImplementedException ();
 	}
 
+
+	private void InitializaGameMap()
+	{
+		map = new List<List<Cell>>();
+		for (int i = 0; i < 32; i++) {
+			List <Cell> row = new List<Cell>();
+			for (int j = 0; j < 32; j++) {
+				Cell tile = ((GameObject)Instantiate(CellPrefab, new Vector3(i - Mathf.Floor(mapSize/2),0, -j + Mathf.Floor(mapSize/2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
+				tile.Coordinates = new Vector2(i, j);
+				row.Add (tile);
+			}
+			map.Add(row);
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
-		_indexOfCharacters = 0;
-		ActivePlayer = GameCharacters [_indexOfCharacters];
+		InitializaGameMap ();
+		//_indexOfCharacters = 0;
+		//ActivePlayer = GameCharacters [_indexOfCharacters];
 	}
 	
 	// Update is called once per frame

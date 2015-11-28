@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
-public class GameMap : MonoBehaviour {
+public class GameMap  {
 	public int MapSize = 32;
 	private static GameMap gm;
 	private static readonly object padlock = new object();
@@ -19,7 +19,7 @@ public class GameMap : MonoBehaviour {
 		for (var i = 0; i < MapSize; i++)
 			for (var j = 0; j < MapSize; j++)
 		{
-			var cell = Instantiate(
+			/*var cell = Instantiate(
 				CellPrefab,
 				new Vector3(j, i, 0),
 				Quaternion.identity) as GameObject;
@@ -28,7 +28,7 @@ public class GameMap : MonoBehaviour {
 			cell.transform.parent = transform;
 			var c = cell.GetComponent<Cell>();
 			c.Coordinates = new Vector2(i, j);
-			CellGameMap[i].Add(c);
+			CellGameMap[i].Add(c);*/
 		}
 	}
 
