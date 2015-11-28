@@ -103,6 +103,12 @@ public static class GameMapExtensions {
 			}
 		}
 	}
+
+    public static List<Cell> GetValidCardinalCells(this GameMap gm, Cell myPos, Cell targetPos)
+    {
+
+        return null;
+    } 
 	
 	public static void ClearCharacterFromMap(this GameMap gm, CharacterObservable obs)
 	{

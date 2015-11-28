@@ -1,15 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿namespace Assets.Artificial_Intelligence.Character_Intelligence
+{
+    public class NormalHealer : EnemyBase {
 
-public class NormalHealer : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+        // Use this for initialization
+        void Start () {
 	
-	}
+        }
 	
-	// Update is called once per frame
-	void Update () {
+        // Update is called once per frame
+        void Update () {
 	
-	}
+        }
+    }
 }
