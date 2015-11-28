@@ -18,6 +18,13 @@ public abstract class AttackCommandSequence : CommandSequence
             throw new ArgumentNullException();
     }
 
+    protected int CalculateDamageReduction(CharacterBase target)
+    {
+        return (int) (target.IsOfTypeWizard()
+            ? target.Stats.Defense + target.Stats.MagicResist
+            : target.Stats.Defense);
+    }
+
     private bool CanDoExtraDamage()
     {
         var nextValue = valuesGenerator.Next(0, _count);

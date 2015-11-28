@@ -64,6 +64,20 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
             HarmCharacter(bs);
     }
 
+    public void HarmTarget()
+    {
+        var isSelfWizardType = _selfAsEnemy.IsOfTypeWizard();
+        var target = _selfAsEnemy.Target;
+        var isDefenseBonusActivated = target.Stats.DefenseBonusActivated;
+        _selfAsEnemy.Animator.SetTrigger(isSelfWizardType ? "Attack" : "Conjuring");
+        var attackPower = isSelfWizardType
+            ? _selfAsEnemy.Stats.Power + _selfAsEnemy.Stats.MagicPower - CalculateDamageReduction(target)
+            : _selfAsEnemy.Stats.Power - CalculateDamageReduction(target);
+        target.Health.CurrentHealth -= (int)(isDefenseBonusActivated ? (attackPower - target.Stats.TemporaryDefenseBonusValue) : attackPower);
+        target.Animator.SetTrigger(target.Stats.DefenseBonusActivated ? "Hurt" : "Defense");
+        target.Notify();
+    }
+
     public override void MoveTowardsCharacter(CharacterObservable character)
     {
         throw new NotImplementedException();
