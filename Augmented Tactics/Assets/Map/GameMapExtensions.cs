@@ -61,7 +61,7 @@ public static class GameMapExtensions {
 	}
 	
 	public static IEnumerable<CharacterObservable> PlayersInRange(this GameMap gm, CharacterObservable self,
-	                                                        params BaseCharacter[] players)
+	                                                        params CharacterObservable[] players)
 	{
 		return players.Where(player => InRange(gm, self, player));
 	}
