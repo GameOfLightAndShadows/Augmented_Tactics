@@ -33,38 +33,42 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
         return _closestEnemyToAttackSequence;
     }
 
-
     public void AttackPlayer(CharacterObservable bs)
     {
         if (_selfAsEnemy.IsOfTypeWizard() && IsInsideAttackRange(bs))
         {
-            HarmCharacter(bs);
+            HarmTarget();
         }
 
         if (_selfAsEnemy.IsOfTypeWizard() && !IsInsideAttackRange(bs))
         {
             MoveTowardsCharacter(bs);
             if (IsInsideAttackRange(bs))
-                HarmCharacter(bs);
+                HarmTarget();
         }
         if (CanAttackFromCloseRange(bs))
         {
-            HarmCharacter(bs);
+            HarmTarget();
         }
 
-        if (!IsMoveNeeded(bs) && !IsFacingPlayer(bs) && !(_self is NormalMage))
+        if (!IsMoveNeeded(bs) && !IsFacingPlayer(bs) && !_selfAsEnemy.IsOfTypeWizard())
         {
             LookAtHuman(bs);
-            HarmCharacter(bs);
+            HarmTarget();
         }
 
         if (!IsMoveNeeded(bs)) return;
         MoveTowardsCharacter(bs);
         if (CanAttackFromCloseRange(bs))
-            HarmCharacter(bs);
+            HarmTarget();
     }
 
-    public void HarmTarget()
+    private bool CanAttackFromCloseRange(CharacterObservable target)
+    {
+        return false;
+    }
+
+    private void HarmTarget()
     {
         var isSelfWizardType = _selfAsEnemy.IsOfTypeWizard();
         var target = _selfAsEnemy.Target;
@@ -76,6 +80,11 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
         target.Health.CurrentHealth -= (int)(isDefenseBonusActivated ? (attackPower - target.Stats.TemporaryDefenseBonusValue) : attackPower);
         target.Animator.SetTrigger(target.Stats.DefenseBonusActivated ? "Hurt" : "Defense");
         target.Notify();
+    }
+
+    private void LookAtHuman(CharacterObservable target)
+    {
+        //Invoke RotateCommand
     }
 
     public override void MoveTowardsCharacter(CharacterObservable character)
