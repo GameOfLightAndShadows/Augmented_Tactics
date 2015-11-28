@@ -15,6 +15,7 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
     {
         _selfAsEnemy = (EnemyBase)Observable;
         SelectTarget(humans);
+        EvaluateCommandSequence();
     }
 
     public override List<Action> MakeCommandSequence()
@@ -35,20 +36,25 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
 
     public void AttackPlayer(CharacterObservable bs)
     {
-        if (_selfAsEnemy.IsOfTypeWizard() && IsInsideAttackRange(bs))
-        {
-            HarmTarget();
-        }
+        if (!CanSelfMove()) return;
 
-        if (_selfAsEnemy.IsOfTypeWizard() && !IsInsideAttackRange(bs))
+        if (_selfAsEnemy.IsOfTypeWizard())
         {
-            MoveTowardsCharacter(bs);
-            if (IsInsideAttackRange(bs))
-                HarmTarget();
+            _closestEnemyToAttackSequence.Add(() => WizardAttackPattern(bs));
         }
-        if (CanAttackWithoutMoving(bs))
+        else
         {
-            HarmTarget();
+            if (CanAttackWithoutMoving(bs))
+                _closestEnemyToAttackSequence.Add(HarmTarget);
+            else
+            {
+                _closestEnemyToAttackSequence.Add(() => MoveTowardsCharacter(bs));
+                if (!_isFacingCharacter)
+                    _closestEnemyToAttackSequence.Add(() => LookAtHuman(bs));
+
+                if (CanPerformCloseRangeAttack())
+                    _closestEnemyToAttackSequence.Add(HarmTarget);
+            }
         }
 
         if (!IsMoveNeeded(bs) && !IsFacingPlayer(bs) && !_selfAsEnemy.IsOfTypeWizard())
@@ -61,6 +67,19 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
         MoveTowardsCharacter(bs);
         if (CanAttackWithoutMoving(bs))
             HarmTarget();
+    }
+
+    private bool CanPerformCloseRangeAttack()
+    {
+        throw new NotImplementedException();
+    }
+
+    private void WizardAttackPattern(CharacterObservable obs)
+    {
+        if (!_isMoveNeeded) return;
+        _closestEnemyToAttackSequence.Add(() => MoveTowardsCharacter(obs));
+        if (!IsInsideAttackRange(obs)) return;
+        _closestEnemyToAttackSequence.Add(HarmTarget);
     }
 
     private bool CanAttackWithoutMoving(CharacterObservable target)
@@ -82,6 +101,10 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
         target.Notify();
     }
 
+    private void HealTeamMember()
+    {
+    }
+
     private void LookAtHuman(CharacterObservable target)
     {
         //Invoke RotateCommand
@@ -98,7 +121,7 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
         return directionMoves.Any(t => t.Coordinates == human.CurrentCoordinates.Coordinates);
     }
 
-    public override void EvaluateCommandSequence()
+    public sealed override void EvaluateCommandSequence()
     {
         _isMoveNeeded = IsMoveNeeded(_selfAsEnemy.Target);
         if (!_isMoveNeeded)
@@ -112,7 +135,7 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
             _closestEnemyToAttackRating += 25;
     }
 
-    public sealed override void SelectTarget(CharacterObservable[] humans)
+    public new void SelectTarget(CharacterObservable[] humans)
     {
         var observableAsEnemy = (EnemyBase)Observable;
         var pathfinder = observableAsEnemy.PathFinder;
