@@ -50,7 +50,15 @@ public class Health {
 			IsDead = true;
 	}
 
-	public void RaiseHealth(CharacterObservable observable)
+    public void TakeDamageFromCharacter(float power)
+    {
+        CurrentHealth -= (int)power;
+        if (CurrentHealth <= 0)
+            IsDead = true;
+    }
+
+
+    public void RaiseHealth(CharacterObservable observable)
 	{
 		if (!IsDead) {
 			CurrentHealth += (int)observable.Stats.MagicPower;
