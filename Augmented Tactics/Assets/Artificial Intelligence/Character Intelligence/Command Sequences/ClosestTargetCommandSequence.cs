@@ -46,7 +46,7 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
             if (IsInsideAttackRange(bs))
                 HarmTarget();
         }
-        if (CanAttackFromCloseRange(bs))
+        if (CanAttackWithoutMoving(bs))
         {
             HarmTarget();
         }
@@ -59,13 +59,13 @@ public class ClosestTargetCommandSequence : AttackCommandSequence
 
         if (!IsMoveNeeded(bs)) return;
         MoveTowardsCharacter(bs);
-        if (CanAttackFromCloseRange(bs))
+        if (CanAttackWithoutMoving(bs))
             HarmTarget();
     }
 
-    private bool CanAttackFromCloseRange(CharacterObservable target)
+    private bool CanAttackWithoutMoving(CharacterObservable target)
     {
-        return false;
+        return !IsMoveNeeded(target) && IsFacingPlayer(target);
     }
 
     private void HarmTarget()
