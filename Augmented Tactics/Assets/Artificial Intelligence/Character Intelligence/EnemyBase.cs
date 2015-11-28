@@ -6,7 +6,11 @@ using System.Linq;
 
 public class EnemyBase : CharacterObservable {
 	public List<CharacterObservable> HumanPlayers;
+	public List<CharacterObservable> TeamParty;
+	public AStarPathfinder PathFinder;
 	public ChoiceSelector ChoiceSelector;
+	public CharacterBase Target;
+	public GameMap Map;
 
 
 	//TODO:Removed abstract Notify in the CharacterObservable script and create an implementation directly in the file. (DRY)

@@ -6,7 +6,7 @@ public interface ICommandAction {
 	void EvaluateCommandSequence();
 	object FindCharacter(); //The return type should the prefab element composing the map. Will be updated on a lete
 	bool IsFacingCharacter(ICharacter self, ICharacter target);
-	CommandSequence MakeCommandSequence();
+	List<Action> MakeCommandSequence();
 	void MoveTowardsCharacter(ICharacter character);
 	void RotateTowardsCharacter(ICharacter character);
 }

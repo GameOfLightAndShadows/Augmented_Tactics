@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 public abstract class CommandSequence : ICommandAction {
 	#region Implemented Methods
 	public bool CanSelfMove()
@@ -29,7 +30,7 @@ public abstract class CommandSequence : ICommandAction {
 	#endregion Implemented Methods
 
 	#region Abstract Methods
-	public abstract CommandSequence MakeCommandSequence();
+	public abstract List<Action> MakeCommandSequence();
 	public abstract void MoveTowardsCharacter(ICharacter character);
 	public abstract void EvaluateCommandSequence();
 	#endregion Abstract Methods
