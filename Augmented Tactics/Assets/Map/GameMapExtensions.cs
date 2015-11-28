@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public static class GameMapExtensions : MonoBehaviour {
+public static class GameMapExtensions {
 
 	public static bool CanMoveAway(this GameMap gm, CharacterObservable chObs)
 	{
