@@ -19,6 +19,7 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable 
 	public CharacterType CharacterType { get; set; }
 	public Cell CurrentCoordinates { get; set; }
 	public Cell OldCoordinates { get; set; }
+    public GameObject ObservableGameObject { get; set; }
 
 	public void Attach(ICharacterObserver observer)
 	{

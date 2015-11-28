@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NormalArcher : MonoBehaviour {
+public class NormalArcher : EnemyBase {
 
 	// Use this for initialization
 	void Start () {
