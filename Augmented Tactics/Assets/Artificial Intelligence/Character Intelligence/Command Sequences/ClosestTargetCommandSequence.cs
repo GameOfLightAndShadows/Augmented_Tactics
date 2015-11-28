@@ -90,10 +90,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
         {
             var myPos = _selfAsEnemy.CurrentCoordinates;
             var targetPos = _selfAsEnemy.Target.CurrentCoordinates;
-            return
-                _selfAsEnemy.Map.GetValidCardinalCells(myPos, targetPos)
-                    .Any(
-                        cc => cc.Coordinates.x == targetPos.Coordinates.x && cc.Coordinates.y == targetPos.Coordinates.y);
+            return _selfAsEnemy.Map.IsTargetPositionAdjacentToSelf(myPos, targetPos);
         }
 
         private void WizardAttackPattern(CharacterObservable obs)

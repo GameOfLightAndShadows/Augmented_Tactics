@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 public class GameMap : MonoBehaviour {
-	public int MapSize = 20;
+	public int MapSize = 32;
 	private static GameMap gm;
 	private static readonly object padlock = new object();
 	public List<List<Cell>> CellGameMap;
@@ -16,8 +16,8 @@ public class GameMap : MonoBehaviour {
 	private void CreateMap()
 	{
 		CellGameMap = new List<List<Cell>>();
-		for (var i = 0; i < 32; i++)
-			for (var j = 0; j < 32; j++)
+		for (var i = 0; i < MapSize; i++)
+			for (var j = 0; j < MapSize; j++)
 		{
 			var cell = Instantiate(
 				CellPrefab,

@@ -104,12 +104,39 @@ public static class GameMapExtensions {
 		}
 	}
 
-    public static List<Cell> GetValidCardinalCells(this GameMap gm, Cell myPos, Cell targetPos)
+    private static List<Cell> GetValidCardinalCells(this GameMap gm, Cell myPos)
     {
+        var curX =(int) myPos.Coordinates.x;
+        var curY =(int) myPos.Coordinates.y;
+        var cardinalCells = new List<Cell>();
+        if (curX - 1 > 0)
+        {
+            cardinalCells.Add(gm.CellGameMap[curX-1].ElementAt(curY));
+        }
 
-        return null;
-    } 
-	
+        if (curX + 1 < gm.MapSize)
+        {
+            cardinalCells.Add(gm.CellGameMap[curX + 1].ElementAt(curY));
+        }
+
+        if (curY - 1 > 0)
+        {
+            cardinalCells.Add(gm.CellGameMap[curX].ElementAt(curY-1));
+        }
+
+        if (curY + 1 > gm.MapSize)
+        {
+            cardinalCells.Add(gm.CellGameMap[curX].ElementAt(curY+1));
+        }
+        return cardinalCells;
+    }
+
+    public static bool IsTargetPositionAdjacentToSelf(this GameMap gm, Cell currentPos, Cell targetCell)
+    {
+        return GetValidCardinalCells(gm, currentPos).Any((
+            cc => cc.Coordinates.x == targetCell.Coordinates.x && cc.Coordinates.y == targetCell.Coordinates.y));
+    }
+
 	public static void ClearCharacterFromMap(this GameMap gm, CharacterObservable obs)
 	{
 		var firstOrDefault = gm.CellGameMap.SelectMany(x => x).FirstOrDefault(x => x.Equals(obs.CurrentCoordinates));
