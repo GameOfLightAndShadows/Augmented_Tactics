@@ -98,6 +98,7 @@
     <Compile Include="Assets\Managers\GameManager.cs" />
     <Compile Include="Assets\Managers\HealthManager.cs" />
     <Compile Include="Assets\Managers\MapCreatorManager.cs" />
+    <Compile Include="Assets\Map\CellType.cs" />
     <Compile Include="Assets\Map\Creator\CellMapXMLContainer.cs" />
     <Compile Include="Assets\Map\Creator\CellXML.cs" />
     <Compile Include="Assets\Map\Creator\MapSaveLoad.cs" />

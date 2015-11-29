@@ -30,7 +30,7 @@ public class GameManager :MonoBehaviour, ICharacterObserver {
 		for (int i = 0; i < 32; i++) {
 			List <Cell> row = new List<Cell>();
 			for (int j = 0; j < 32; j++) {
-				Cell tile = ((GameObject)Instantiate(CellPrefab, new Vector3(i - Mathf.Floor(mapSize/2),0, -j + Mathf.Floor(mapSize/2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
+				Cell tile = ((GameObject)Instantiate(PrefabHolder.instance.BASE_TILE_PREFAB, new Vector3(i - Mathf.Floor(mapSize/2),0, -j + Mathf.Floor(mapSize/2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
 				tile.Coordinates = new Vector2(i, j);
 				row.Add (tile);
 			}

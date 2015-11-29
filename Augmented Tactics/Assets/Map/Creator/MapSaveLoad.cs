@@ -33,7 +33,7 @@ namespace Assets.Map.Creator
         {
             return new CellXML()
             {
-               // id = (int)tile.type,
+                id = (int)cell.Type,
                 locX = (int)cell.Coordinates.x,
                 locY = (int)cell.Coordinates.y
             };
