@@ -4,7 +4,7 @@ using Assets.Map;
 
 public class Cell : MonoBehaviour
 {
-	public Vector2 Coordinates { get; set; }
+    public Vector2 Coordinates = Vector2.zero;
     public CellType Type { get; set; }
 	
 	public bool UseByCharacter;

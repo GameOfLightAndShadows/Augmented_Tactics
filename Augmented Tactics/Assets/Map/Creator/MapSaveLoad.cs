@@ -18,7 +18,7 @@ namespace Assets.Map.Creator
             {
                 for (int j = 0; j < map.Count; j++)
                 {
-                    cells.Add(MapSaveLoad.CreateCellXml(map[i][j]));
+                    cells.Add(CreateCellXml(map[i][j]));
                 }
             }
 
