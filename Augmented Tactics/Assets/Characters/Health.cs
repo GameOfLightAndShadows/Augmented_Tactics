@@ -65,4 +65,11 @@ public class Health {
 			CapHealth ();
 		}
 	}
+
+    public void RaiseHealth(int strength)
+    {
+        if (IsDead) return;
+        CurrentHealth += strength;
+        CapHealth();
+    }
 }
