@@ -33,6 +33,11 @@ public class CommandManager : MonoBehaviour
         CurrentCharater = current;
     }
 
+    public void EmptyCommandStack()
+    {
+        CommandStack.Clear();
+    }
+
     //TODO: Update method's signature
     public void Undo(CharacterObservable caller, CharacterObservable active)
     {

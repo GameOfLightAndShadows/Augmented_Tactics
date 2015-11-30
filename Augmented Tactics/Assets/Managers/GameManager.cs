@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     {
         _indexOfCharacters = _indexOfCharacters + 1 < GameCharacters.Count ? _indexOfCharacters + 1 : 0;
         ActivePlayer = GameCharacters[_indexOfCharacters];
+        _commandManager.EmptyCommandStack();
     }
 
     private void GenerateGameCharacter()
@@ -46,7 +47,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     {
         character.Animator.SetTrigger("Death");
         //wait 0.5-1s
-        Destroy(character,3f);
+        Destroy(character,2f);
     }
 
     private void loadMapFromXml()
@@ -129,9 +130,15 @@ public class GameManager : MonoBehaviour, ICharacterObserver
         mapTransform = transform.FindChild("Map");
         GameMap = spawmer.GenerateGameMap();
         GenerateGameCharacter();
+        PlaceGameCharactersOnMap();
         //GenerateCombatMenuUI
         //ActivateFirstPlayer
 
+    }
+
+    public void PlaceGameCharactersOnMap()
+    {
+        throw new NotImplementedException();
     }
 
     // Use this for initialization
