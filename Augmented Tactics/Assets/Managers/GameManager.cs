@@ -28,7 +28,8 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     {
         throw new NotImplementedException();
     }
-    void loadMapFromXml()
+
+    private void loadMapFromXml()
     {
         CellMapXMLContainer container = MapSaveLoad.Load("map.xml");
 
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
             map.Add(row);
         }
     }
+
     private void CreateMap()
     {
         CellMapXMLContainer container = MapSaveLoad.Load("map.xml");

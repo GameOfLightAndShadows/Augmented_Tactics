@@ -1,26 +1,25 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using Assets.Managers;
 using Assets.Map;
 using System.Collections.Generic;
-using Assets.Managers;
+using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
     public Vector2 gridPosition = Vector2.zero;
-	
-	public bool UseByCharacter;
-	
-	public virtual bool IsWalkable()
-	{
-		return true;
-	}
-	
-	public virtual float MovementCost()
-	{
-		return 0;
-	}
 
-    GameObject PREFAB;
+    public bool UseByCharacter;
+
+    public virtual bool IsWalkable()
+    {
+        return true;
+    }
+
+    public virtual float MovementCost()
+    {
+        return 0;
+    }
+
+    private GameObject PREFAB;
 
     public GameObject visual;
 
@@ -31,7 +30,7 @@ public class Cell : MonoBehaviour
     public List<Cell> neighbors = new List<Cell>();
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         if (Application.loadedLevelName == "gameScene") generateNeighbors();
     }
@@ -68,12 +67,11 @@ public class Cell : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-
     }
 
-    void OnMouseEnter()
+    private void OnMouseEnter()
     {
         if (Application.loadedLevelName == "MapCreatorScene" && Input.GetMouseButton(0))
         {
@@ -81,25 +79,23 @@ public class Cell : MonoBehaviour
         }
     }
 
-    void OnMouseExit()
+    private void OnMouseExit()
     {
-
     }
 
-
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (Application.loadedLevelName == "gameScene")
         {
-                impassible = impassible ? false : true;
-                if (impassible)
-                {
-                    visual.transform.GetComponent<Renderer>().materials[0].color = new Color(.5f, .5f, 0.0f);
-                }
-                else
-                {
-                    visual.transform.GetComponent<Renderer>().materials[0].color = Color.white;
-                }
+            impassible = impassible ? false : true;
+            if (impassible)
+            {
+                visual.transform.GetComponent<Renderer>().materials[0].color = new Color(.5f, .5f, 0.0f);
+            }
+            else
+            {
+                visual.transform.GetComponent<Renderer>().materials[0].color = Color.white;
+            }
         }
         else if (Application.loadedLevelName == "MapCreatorScene")
         {

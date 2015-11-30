@@ -100,6 +100,7 @@
     <Compile Include="Assets\Managers\CharacterLoadingManager.cs" />
     <Compile Include="Assets\Managers\CommandManager.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
+    <Compile Include="Assets\Managers\GameObjectSpawmer.cs" />
     <Compile Include="Assets\Managers\HealthManager.cs" />
     <Compile Include="Assets\Managers\MapCreatorManager.cs" />
     <Compile Include="Assets\Map\CellType.cs" />

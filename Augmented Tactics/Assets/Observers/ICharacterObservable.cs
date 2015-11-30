@@ -1,8 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿public interface ICharacterObservable : ICharacter
+{
+    void Attach(ICharacterObserver observer);
 
-public interface ICharacterObservable : ICharacter {
-	void Attach(ICharacterObserver observer);
-	void Detach(ICharacterObserver observer);
-	void Notify();
+    void Detach(ICharacterObserver observer);
+
+    void Notify();
 }

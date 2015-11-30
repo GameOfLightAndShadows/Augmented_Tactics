@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
+﻿using System.Collections.Generic;
 using System.IO;
+using System.Xml.Serialization;
+
 namespace Assets.Map.Creator
 {
     public static class MapSaveLoad
     {
         public static CellMapXMLContainer CreateMapContainer(List<List<Cell>> map)
         {
-
             List<CellXML> cells = new List<CellXML>();
 
             for (int i = 0; i < map.Count; i++)

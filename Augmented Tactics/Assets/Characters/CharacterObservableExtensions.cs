@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using UnityEngine;
+
 public static class CharacterObservableExtensions
 {
     //IsOfType methods will have to be optimized to a single method in the future by simply passing a params of Type array
@@ -31,7 +31,7 @@ public static class CharacterObservableExtensions
             return archer;
         }
     }
-    
+
     public static bool IsNull(this CharacterObservable obs)
     {
         return obs == null;

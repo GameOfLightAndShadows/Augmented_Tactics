@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequences;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequences;
 
 public class ChoiceSelector
 {
     private List<CommandSequence> _strategies;
-    private Dictionary<List<Action>, int> _actionsAndScores; 
+    private Dictionary<List<Action>, int> _actionsAndScores;
+
     public ChoiceSelector(params CommandSequence[] sequences)
     {
         _strategies = sequences.ToList();

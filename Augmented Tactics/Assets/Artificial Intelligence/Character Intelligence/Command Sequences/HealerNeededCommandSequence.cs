@@ -44,7 +44,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
         {
             var enemyObs = (EnemyBase)Observable;
             var obsParty = enemyObs.TeamParty;
-            EnemyBase partyHealer = (EnemyBase) obsParty.FirstOrDefault(member => member is NormalHealer);
+            EnemyBase partyHealer = (EnemyBase)obsParty.FirstOrDefault(member => member is NormalHealer);
             var healerCell = enemyObs.Map.FindPlayerCoordinates(partyHealer);
             if (partyHealer == null || healerCell == null)
                 return;

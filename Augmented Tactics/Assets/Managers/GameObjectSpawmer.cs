@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Assets.Managers
@@ -40,6 +38,5 @@ namespace Assets.Managers
         {
             throw new NotImplementedException();
         }
-
     }
 }
