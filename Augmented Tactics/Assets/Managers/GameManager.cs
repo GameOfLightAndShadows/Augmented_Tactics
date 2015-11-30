@@ -44,7 +44,9 @@ public class GameManager : MonoBehaviour, ICharacterObserver
 
     public void UpdateObserver(CharacterObservable character)
     {
-        throw new NotImplementedException();
+        character.Animator.SetTrigger("Death");
+        //wait 0.5-1s
+        Destroy(character,3f);
     }
 
     private void loadMapFromXml()
@@ -124,8 +126,12 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     public void Awake()
     {
         instance = this;
-
         mapTransform = transform.FindChild("Map");
+        GameMap = spawmer.GenerateGameMap();
+        GenerateGameCharacter();
+        //GenerateCombatMenuUI
+        //ActivateFirstPlayer
+
     }
 
     // Use this for initialization
