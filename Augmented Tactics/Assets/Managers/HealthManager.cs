@@ -14,7 +14,7 @@ public class HealthManager : ICharacterObserver
             obs.Health.TakeDamageFromCharacter(strength);
             //Make sure the Health UI was changed too !
             if (obs.Health.IsDead)
-                obs.Notify();
+                GameManager.instance.UpdateObserver(obs);
         }
         else
         {
