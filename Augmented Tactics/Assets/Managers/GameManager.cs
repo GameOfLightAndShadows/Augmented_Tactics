@@ -1,9 +1,9 @@
-﻿using Assets.Map;
+﻿using Assets.Managers;
+using Assets.Map;
 using Assets.Map.Creator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.Managers;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour, ICharacterObserver
@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     public List<List<Cell>> map;
     public int mapSize = 32;
     private Transform mapTransform;
-    private GameObjectSpawmer spawmer; 
+    private GameObjectSpawmer spawmer;
+    public CommandManager _commandManager;
 
     public static GameManager instance;
 
@@ -131,12 +132,30 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     public void Start()
     {
         loadMapFromXml();
-        //_indexOfCharacters = 0;
-        //ActivePlayer = GameCharacters [_indexOfCharacters];
+        _indexOfCharacters = 0;
+        ActivePlayer = GameCharacters[_indexOfCharacters];
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if (DidPlayerLose())
+        {
+            //Show canvas for lost game.
+        }
+        if (DidPlayerWin())
+        {
+            //Show canvas for won game.
+        }
+
+        if (HasCharacterEndTurn())
+        {
+            GoToNextCharacter();
+        }
+    }
+
+    private bool HasCharacterEndTurn()
+    {
+        return _commandManager.PreviousAction is EndTurnCommand || _commandManager.PreviousAction is SkipCommand; 
     }
 }
