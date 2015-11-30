@@ -3,6 +3,7 @@ using Assets.Map.Creator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Managers;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour, ICharacterObserver
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     public List<List<Cell>> map;
     public int mapSize = 32;
     private Transform mapTransform;
+    private GameObjectSpawmer spawmer; 
 
     public static GameManager instance;
 
@@ -22,6 +24,21 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     {
         _indexOfCharacters = _indexOfCharacters + 1 < GameCharacters.Count ? _indexOfCharacters + 1 : 0;
         ActivePlayer = GameCharacters[_indexOfCharacters];
+    }
+
+    private void GenerateGameCharacter()
+    {
+        GameCharacters = spawmer.GenerateGameCharacters();
+    }
+
+    private bool DidPlayerLose()
+    {
+        return spawmer.Humans.Count == 0;
+    }
+
+    private bool DidPlayerWin()
+    {
+        return spawmer.Enemies.Count == 0;
     }
 
     public void UpdateObserver(CharacterObservable character)
