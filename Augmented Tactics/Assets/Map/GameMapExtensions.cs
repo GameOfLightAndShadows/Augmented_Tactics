@@ -13,13 +13,13 @@ public static class GameMapExtensions {
 	
 	public static IEnumerable<Cell> GetAvailableMoveActions(this GameMap gm, CharacterObservable self)
 	{
-		var coor = self.CurrentCoordinates.Coordinates;
+		var coor = self.CurrentCoordinates.gridPosition;
 		return
 			gm.CellGameMap.SelectMany(
-				row => row.Where(cell => Math.Abs(cell.Coordinates.x - (coor.x + 0x1)) < double.Epsilon ||
-			                 Math.Abs(cell.Coordinates.x - (coor.x - 0x1)) < double.Epsilon ||
-			                 Math.Abs(cell.Coordinates.y - (coor.y + 0x1)) < double.Epsilon ||
-			                 Math.Abs(cell.Coordinates.y - (coor.y - 0x1)) < double.Epsilon));
+				row => row.Where(cell => Math.Abs(cell.gridPosition.x - (coor.x + 0x1)) < double.Epsilon ||
+			                 Math.Abs(cell.gridPosition.x - (coor.x - 0x1)) < double.Epsilon ||
+			                 Math.Abs(cell.gridPosition.y - (coor.y + 0x1)) < double.Epsilon ||
+			                 Math.Abs(cell.gridPosition.y - (coor.y - 0x1)) < double.Epsilon));
 	}
 	
 	public static int GetNumberCharactersBlockingMovement(this GameMap gm, CharacterObservable character)
@@ -37,14 +37,14 @@ public static class GameMapExtensions {
 	public static Cell FindPlayerCoordinates(this GameMap gm, CharacterObservable player)
 	{
 		var cells = gm.CellGameMap.Cast<Cell>().ToList();
-		return cells.FirstOrDefault(c => c.Coordinates == player.CurrentCoordinates.Coordinates);
+		return cells.FirstOrDefault(c => c.gridPosition == player.CurrentCoordinates.gridPosition);
 	}
 	
 	public static bool InRange(this GameMap gm, CharacterObservable self, CharacterObservable target)
 	{
 		var mp = self.MovementPoints;
 		var currentPos = self.CurrentCoordinates;
-		var row = gm.CellGameMap.ElementAt((int)currentPos.Coordinates.x);
+		var row = gm.CellGameMap.ElementAt((int)currentPos.gridPosition.x);
 		var start = gm.CellGameMap.IndexOf(row) - mp;
 		if (start <= 0)
 			start = 0;
@@ -53,7 +53,7 @@ public static class GameMapExtensions {
 			var counter = start;
 			for (; counter < 2 * mp + start; counter++)
 			{
-				if (row.ElementAt(counter).Coordinates == target.CurrentCoordinates.Coordinates)
+				if (row.ElementAt(counter).gridPosition == target.CurrentCoordinates.gridPosition)
 					return true;
 			}
 		}
@@ -71,7 +71,7 @@ public static class GameMapExtensions {
 	{
 		var mp = self.MovementPoints;
 		var currentPos = self.CurrentCoordinates;//Pos in x, y
-		var row = gm.CellGameMap.ElementAt((int)currentPos.Coordinates.x);
+		var row = gm.CellGameMap.ElementAt((int)currentPos.gridPosition.x);
 		var start = gm.CellGameMap.IndexOf(row) - mp;
 		if (start <= 0)
 			start = 0;
@@ -80,7 +80,7 @@ public static class GameMapExtensions {
 			var counter = start;
 			for (; counter < 2 * mp + start; counter++)
 			{
-				if (row.ElementAt(counter).Coordinates == target.CurrentCoordinates.Coordinates)
+				if (row.ElementAt(counter).gridPosition == target.CurrentCoordinates.gridPosition)
 					return true;
 			}
 		}
@@ -106,8 +106,8 @@ public static class GameMapExtensions {
 
     private static List<Cell> GetValidCardinalCells(this GameMap gm, Cell myPos)
     {
-        var curX =(int) myPos.Coordinates.x;
-        var curY =(int) myPos.Coordinates.y;
+        var curX =(int) myPos.gridPosition.x;
+        var curY =(int) myPos.gridPosition.y;
         var cardinalCells = new List<Cell>();
         if (curX - 1 > 0)
         {
@@ -134,7 +134,7 @@ public static class GameMapExtensions {
     public static bool IsTargetPositionAdjacentToSelf(this GameMap gm, Cell currentPos, Cell targetCell)
     {
         return GetValidCardinalCells(gm, currentPos).Any((
-            cc => cc.Coordinates.x == targetCell.Coordinates.x && cc.Coordinates.y == targetCell.Coordinates.y));
+            cc => cc.gridPosition.x == targetCell.gridPosition.x && cc.gridPosition.y == targetCell.gridPosition.y));
     }
 
 	public static void ClearCharacterFromMap(this GameMap gm, CharacterObservable obs)

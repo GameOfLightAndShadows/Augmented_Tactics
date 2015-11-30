@@ -30,8 +30,8 @@ public class AStarPathfinder
 		_mapWidth = _map.GetLength(0);
 		_mapHeight = _map.GetLength(1);
 		
-		_start = new Node((int)startCell.Coordinates.x, (int)startCell.Coordinates.y, 0, 0, 0, null, startCell);
-		end = new Node((int)goalCell.Coordinates.x, (int)goalCell.Coordinates.y, 0, 0, 0, null, goalCell);
+		_start = new Node((int)startCell.gridPosition.x, (int)startCell.gridPosition.y, 0, 0, 0, null, startCell);
+		end = new Node((int)goalCell.gridPosition.x, (int)goalCell.gridPosition.y, 0, 0, 0, null, goalCell);
 		_openList.Add(_start);
 		bool keepSearching = true;
 		bool pathExists = true;

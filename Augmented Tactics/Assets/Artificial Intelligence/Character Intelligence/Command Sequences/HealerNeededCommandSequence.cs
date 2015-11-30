@@ -32,8 +32,8 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
                 return false;
 
             var movePoints = Observable.MovementPoints;
-            var obsCoordinates = Observable.CurrentCoordinates.Coordinates;
-            var healerCoordinates = destCell.Coordinates;
+            var obsCoordinates = Observable.CurrentCoordinates.gridPosition;
+            var healerCoordinates = destCell.gridPosition;
             return obsCoordinates.x + movePoints <= healerCoordinates.x ||
                    obsCoordinates.x - movePoints <= healerCoordinates.x &&
                    obsCoordinates.y + movePoints <= healerCoordinates.y ||
@@ -67,7 +67,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
             var healer = _healerData.First().Key;
             var enemy = (EnemyBase)Observable;
             var directionMoves = enemy.Map.GetAvailableMoveActions(enemy); // Will need to modify to a simple call from the GameManager property that will accessible from everywhere
-            return directionMoves.Any(x => x.Coordinates == _healerData.First().Value.Coordinates);
+            return directionMoves.Any(x => x.gridPosition == _healerData.First().Value.gridPosition);
         }
 
         public override List<Action> MakeCommandSequence()

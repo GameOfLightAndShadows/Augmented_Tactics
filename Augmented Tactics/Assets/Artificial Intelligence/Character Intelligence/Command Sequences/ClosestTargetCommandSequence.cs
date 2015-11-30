@@ -137,7 +137,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
         private bool IsMoveNeeded(CharacterObservable human)
         {
             var directionMoves = _selfAsEnemy.Map.GetAvailableMoveActions(_selfAsEnemy);
-            return directionMoves.Any(t => t.Coordinates == human.CurrentCoordinates.Coordinates);
+            return directionMoves.Any(t => t.gridPosition == human.CurrentCoordinates.gridPosition);
         }
 
         public sealed override void EvaluateCommandSequence()
