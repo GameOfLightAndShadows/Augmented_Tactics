@@ -28,7 +28,33 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     {
         throw new NotImplementedException();
     }
+    void loadMapFromXml()
+    {
+        CellMapXMLContainer container = MapSaveLoad.Load("map.xml");
 
+        mapSize = container.size;
+
+        //initially remove all children
+        for (int i = 0; i < mapTransform.childCount; i++)
+        {
+            Destroy(mapTransform.GetChild(i).gameObject);
+        }
+
+        map = new List<List<Cell>>();
+        for (int i = 0; i < mapSize; i++)
+        {
+            List<Cell> row = new List<Cell>();
+            for (int j = 0; j < mapSize; j++)
+            {
+                Cell tile = ((GameObject)Instantiate(PrefabHolder.instance.BASE_TILE_PREFAB, new Vector3(i - Mathf.Floor(mapSize / 2), 0, -j + Mathf.Floor(mapSize / 2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
+                tile.transform.parent = mapTransform;
+                tile.gridPosition = new Vector2(i, j);
+                tile.setType((CellType)container.cells.Where(x => x.locX == i && x.locY == j).First().id);
+                row.Add(tile);
+            }
+            map.Add(row);
+        }
+    }
     private void CreateMap()
     {
         CellMapXMLContainer container = MapSaveLoad.Load("map.xml");
@@ -47,15 +73,12 @@ public class GameManager : MonoBehaviour, ICharacterObserver
             List<Cell> row = new List<Cell>();
             for (int j = 0; j < mapSize; j++)
             {
-                Cell cell = ((GameObject)Instantiate(PrefabHolder.instance.BASE_TILE_PREFAB, new Vector3(i - Mathf.Floor(mapSize / 2), 0, -j + Mathf.Floor(mapSize / 2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
-                Debug.Log(cell == null);
-                Debug.Log(mapTransform == null);
-
+                GameObject cellPrefab;
+                cellPrefab = ((GameObject)Instantiate(PrefabHolder.instance.BASE_TILE_PREFAB.gameObject, new Vector3(i - Mathf.Floor(mapSize / 2), 0, -j + Mathf.Floor(mapSize / 2)), Quaternion.Euler(new Vector3())));
+                Cell cell = cellPrefab.GetComponent<Cell>();
                 cell.transform.parent = mapTransform;
-                cell.Coordinates = new Vector2(i, j);
-                Debug.Log(cell == null);
-                Debug.Log(cell.Coordinates == null);
-                cell.Type = (CellType)(container.cells.Where(x => x.locX == i && x.locY == j).First().id);
+                cell.gridPosition = new Vector2(i, j);
+                cell.type = (CellType)(container.cells.Where(x => x.locX == i && x.locY == j).First().id);
                 row.Add(cell);
             }
             map.Add(row);
@@ -71,7 +94,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
             for (int j = 0; j < 32; j++)
             {
                 Cell tile = ((GameObject)Instantiate(PrefabHolder.instance.BASE_TILE_PREFAB, new Vector3(i - Mathf.Floor(mapSize / 2), 0, -j + Mathf.Floor(mapSize / 2)), Quaternion.Euler(new Vector3()))).GetComponent<Cell>();
-                tile.Coordinates = new Vector2(i, j);
+                tile.gridPosition = new Vector2(i, j);
                 row.Add(tile);
             }
             map.Add(row);
@@ -88,7 +111,7 @@ public class GameManager : MonoBehaviour, ICharacterObserver
     // Use this for initialization
     public void Start()
     {
-        CreateMap();
+        loadMapFromXml();
         //_indexOfCharacters = 0;
         //ActivePlayer = GameCharacters [_indexOfCharacters];
     }

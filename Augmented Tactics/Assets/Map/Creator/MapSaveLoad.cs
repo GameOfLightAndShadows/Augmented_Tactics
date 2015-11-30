@@ -33,9 +33,9 @@ namespace Assets.Map.Creator
         {
             return new CellXML()
             {
-                id = (int)cell.Type,
-                locX = (int)cell.Coordinates.x,
-                locY = (int)cell.Coordinates.y
+                id = (int)cell.type,
+                locX = (int)cell.gridPosition.x,
+                locY = (int)cell.gridPosition.y
             };
         }
 
