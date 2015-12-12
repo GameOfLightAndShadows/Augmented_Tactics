@@ -60,20 +60,22 @@ public class CharacterBase : CharacterObservable
         float buttonWidth = 150;
 
         Rect buttonRect = new Rect(0, Screen.height - buttonHeight * 7, buttonWidth, buttonHeight);
-
+        ICharacterActionCommand cmd;
         //move button
         if (GUI.Button(buttonRect, "Move"))
         {
             if (!_isMoving)
             {
-                //There should be a GameMap manager or at the very least a TileManager
-                //GameManager.instance.removeTileHighlights();
+                GameManager.instance.removeTileHighlights();
                 _isMoving = true;
                 _isAttacking = false;
                 _hasPerformedAtLeastOneMove = true;
                 _isDefending = false;
                 _isRotating = false;
-                //GameManager.instance.highlightTilesAt(gridPosition, Color.blue, movementPerActionPoint, false);
+                cmd = new MoveCommand(null, null);
+                _cmdManager.CommandStack.Push(cmd);
+                cmd.Execute();
+                GameManager.instance.highlightTilesAt(gridPosition, Color.blue, movementPerActionPoint, false);
             }
             else
             {
@@ -99,6 +101,9 @@ public class CharacterBase : CharacterObservable
                 _hasPerformedAtLeastOneMove = true;
                 _isDefending = false;
                 _isRotating = false;
+                cmd = new AttackCommand(null);
+                _cmdManager.CommandStack.Push(cmd);
+                cmd.Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
@@ -125,6 +130,9 @@ public class CharacterBase : CharacterObservable
                 _hasPerformedAtLeastOneMove = true;
                 _isDefending = true;
                 _isRotating = false;
+                cmd = new DefendCommand(null);
+                _cmdManager.CommandStack.Push(cmd);
+                cmd.Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
@@ -150,6 +158,8 @@ public class CharacterBase : CharacterObservable
                 _hasPerformedAtLeastOneMove = false;
                 _isDefending = false;
                 _isRotating = true;
+                _cmdManager.CommandStack.Push(cmd);
+                cmd.Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
