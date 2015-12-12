@@ -1,0 +1,75 @@
+Animated Archer
+
+This character has 35 animations.
+Main body has 936 polygons and 896 vertexes.
+With weapons 1599 polygons and 1527 vertexes.
+
+<a href="http://www.youtube.com/watch?v=BImfqPJpfm8&feature=related">See it on video!</a>
+
+Animation list:
+
+1) ARCH_combat_mode: 0 – 75 fr.,
+
+2) ARCH_ready_arrow_fromBack: 76 – 126 fr.,
+3) ARCH_ready_arrow_fromSide: 127 – 172 fr.,
+
+4) ARCH_charging: 173 – 208 fr.,
+5) ARCH_aim: 209 – 309 fr.,
+6) ARCH_shoting: 310 – 345 fr.,
+
+7) ARCH_Hit_from_front: 346 – 381 fr.,
+
+8) ARCH_moving_left: 382 – 402 fr.,
+9) ARCH_moving_right: 403 – 423 fr.,
+
+10) ARCH_Dying: 424 – 489 fr.,
+
+11) ARCH_dodge_backwards: 490 – 525 fr.,
+
+12) ARCH_sword_combat_mode: 526 – 576 fr.,
+13) ARCH_parry: 577 – 612  fr.,
+
+14) ARCH_swing_left: 613 – 648 fr.,
+15) ARCH_swing_right: 649 – 684 fr.,
+16) ARCH_thrust: 685 – 720 fr.,
+
+17) ARCH_walk: 724 – 768 fr.,
+18) ARCH_Jump_runing: 771 – 811 fr.,
+19) ARCH_Run: 812 – 834 fr.,
+
+20) ARCH_StandingFree: 835 – 935 fr.,
+21) ARCH_looking_around: 936 – 1112 fr.,
+
+22) ARCH_talking: 1113 – 1158 fr.,
+23) ARCH_use_object 1159 – 1199 fr.,
+
+24) ARCH_Idle_45left_turn: 1204 – 1219 fr.,
+25) ARCH_Idle_45Right_turn: 1224 – 1239 fr.,
+
+26) ARCH_combat_45left_turn: 1244 – 1259 fr.,
+27) ARCH_combat_45Right_turn: 1264 – 1279 fr.,
+
+28) ARCH_Walk_Combat: 1284 – 1329 fr.,
+
+29) ARCH_Walk_Take_Arrow_Back: 1334 – 1379 fr.,
+30) ARCH_Walk_Take_Arrow_Side: 1384 – 1429 fr.,
+
+31) ARCH_Walk_Charging: 1434 – 1479 fr.,
+32) ARCH_Walk_Aim: 1484 – 1529 fr.,
+33) ARCH_Walk_Shoting: 1534 – 1579 fr.,
+
+34) ARCH_aim_45left_turn: 1584 – 1599 fr.,
+35) ARCH_aim_45Right_turn: 1604 – 1619 fr.,
+
+Textures: diffuse, specular, and normals maps. 
+Textures are TIF file format 1024x1024 - body and 512x512 - weapons.
+
+If you have questions, please mail me: mr.necturus@gmail.com
+
+
+male, character, fantasy, warrior, archer, man, armor, polygonal, video game, wow, rpg, mmo, soldier, military, fps, army, bow, medieval 
+
+fixes.
+
+1. Walk animation fixed, timeline changed.
+

@@ -1,129 +1,142 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{9424FF50-D5D5-0E69-8A1B-29BFEC57F8CA}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <BaseDirectory>Assets</BaseDirectory>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<RootNamespace></RootNamespace>
+	<ProjectGuid>{9424FF50-D5D5-0E69-8A1B-29BFEC57F8CA}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_2_2;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_EVENT_QUEUE;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>Temp\bin\Release\</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+	<Reference Include="System" />
     <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\AttackCommandSequence.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ChoiceSelector.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ClosestTargetCommandSequence.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\CommandSequence.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\DefensiveCommandSequence.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\HealerNeededCommandSequence.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ICommandAction.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBase.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalArcher.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalAssassin.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalBattleWizard.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalHealer.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalKnight.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalSwordsman.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalWizard.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Map Intelligence\AStarPathfinder.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Cell.cs" />
-    <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Node.cs" />
-    <Compile Include="Assets\Characters\Character Builder\CharacterBuilder.cs" />
-    <Compile Include="Assets\Characters\Character Builder\ICharacterBuilder.cs" />
-    <Compile Include="Assets\Characters\Character Serializer\CharacterSaveLoad.cs" />
-    <Compile Include="Assets\Characters\Character Serializer\CharacterXML.cs" />
-    <Compile Include="Assets\Characters\Character Serializer\CharacterXMLContainer.cs" />
-    <Compile Include="Assets\Characters\CharacterBase.cs" />
-    <Compile Include="Assets\Characters\CharacterObservable.cs" />
-    <Compile Include="Assets\Characters\CharacterObservableExtensions.cs" />
-    <Compile Include="Assets\Characters\CharacterRole.cs" />
-    <Compile Include="Assets\Characters\CharacterStats.cs" />
-    <Compile Include="Assets\Characters\CharacterType.cs" />
-    <Compile Include="Assets\Characters\Health.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Archer.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Assassin.cs" />
-    <Compile Include="Assets\Characters\Human Characters\BattleWizard.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Healer.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Knight.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Swordsman.cs" />
-    <Compile Include="Assets\Characters\Human Characters\Wizard.cs" />
-    <Compile Include="Assets\Characters\ICharacter.cs" />
-    <Compile Include="Assets\Characters\IStats.cs" />
-    <Compile Include="Assets\Characters\PlayerDirection.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\AttackCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\CharacterAction.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\DefendCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\EndTurnCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\GameActions.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\ICharacterActionCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\IReceiver.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\MoveCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\RotateCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\SkipCommand.cs" />
-    <Compile Include="Assets\CombatMenu\Commands\UndoCommand.cs" />
-    <Compile Include="Assets\Managers\CharacterLoadingManager.cs" />
-    <Compile Include="Assets\Managers\CommandManager.cs" />
-    <Compile Include="Assets\Managers\GameManager.cs" />
-    <Compile Include="Assets\Managers\GameObjectSpawmer.cs" />
-    <Compile Include="Assets\Managers\HealthManager.cs" />
-    <Compile Include="Assets\Managers\MapCreatorManager.cs" />
-    <Compile Include="Assets\Map\CellType.cs" />
-    <Compile Include="Assets\Map\Creator\CellMapXMLContainer.cs" />
-    <Compile Include="Assets\Map\Creator\CellXML.cs" />
-    <Compile Include="Assets\Map\Creator\MapSaveLoad.cs" />
-    <Compile Include="Assets\Map\GameMap.cs" />
-    <Compile Include="Assets\Map\GameMapExtensions.cs" />
-    <Compile Include="Assets\Observers\ICharacterObservable.cs" />
-    <Compile Include="Assets\Observers\ICharacterObserver.cs" />
-    <Compile Include="Assets\PrefabHolder.cs" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\AttackCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ChoiceSelector.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ClosestTargetCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\CommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\DefensiveCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\HealerNeededCommandSequence.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\Command Sequences\ICommandAction.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\EnemyBase.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalArcher.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalAssassin.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalBattleWizard.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalHealer.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalKnight.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalSwordsman.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Character Intelligence\NormalWizard.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Map Intelligence\AStarPathfinder.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Cell.cs" />
+     <Compile Include="Assets\Artificial Intelligence\Map Intelligence\Node.cs" />
+     <Compile Include="Assets\Characters\Character Builder\CharacterBuilder.cs" />
+     <Compile Include="Assets\Characters\Character Builder\ICharacterBuilder.cs" />
+     <Compile Include="Assets\Characters\Character Serializer\CharacterSaveLoad.cs" />
+     <Compile Include="Assets\Characters\Character Serializer\CharacterXML.cs" />
+     <Compile Include="Assets\Characters\Character Serializer\CharacterXMLContainer.cs" />
+     <Compile Include="Assets\Characters\CharacterBase.cs" />
+     <Compile Include="Assets\Characters\CharacterObservable.cs" />
+     <Compile Include="Assets\Characters\CharacterObservableExtensions.cs" />
+     <Compile Include="Assets\Characters\CharacterRole.cs" />
+     <Compile Include="Assets\Characters\CharacterStats.cs" />
+     <Compile Include="Assets\Characters\CharacterType.cs" />
+     <Compile Include="Assets\Characters\Health.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Archer.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Assassin.cs" />
+     <Compile Include="Assets\Characters\Human Characters\BattleWizard.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Healer.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Knight.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Swordsman.cs" />
+     <Compile Include="Assets\Characters\Human Characters\Wizard.cs" />
+     <Compile Include="Assets\Characters\ICharacter.cs" />
+     <Compile Include="Assets\Characters\IStats.cs" />
+     <Compile Include="Assets\Characters\PlayerDirection.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\AttackCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\CharacterAction.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\DefendCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\EndTurnCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\GameActions.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\ICharacterActionCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\IReceiver.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\MoveCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\RotateCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\SkipCommand.cs" />
+     <Compile Include="Assets\CombatMenu\Commands\UndoCommand.cs" />
+     <Compile Include="Assets\Managers\CharacterLoadingManager.cs" />
+     <Compile Include="Assets\Managers\CommandManager.cs" />
+     <Compile Include="Assets\Managers\GameManager.cs" />
+     <Compile Include="Assets\Managers\GameObjectSpawmer.cs" />
+     <Compile Include="Assets\Managers\HealthManager.cs" />
+     <Compile Include="Assets\Managers\MapCreatorManager.cs" />
+     <Compile Include="Assets\Map\CellType.cs" />
+     <Compile Include="Assets\Map\Creator\CellMapXMLContainer.cs" />
+     <Compile Include="Assets\Map\Creator\CellXML.cs" />
+     <Compile Include="Assets\Map\Creator\MapSaveLoad.cs" />
+     <Compile Include="Assets\Map\GameMap.cs" />
+     <Compile Include="Assets\Map\GameMapExtensions.cs" />
+     <Compile Include="Assets\Observers\ICharacterObservable.cs" />
+     <Compile Include="Assets\Observers\ICharacterObserver.cs" />
+     <Compile Include="Assets\PrefabHolder.cs" />
+     <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\Wizard_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\Fantasy_laddy_assasin\Assassin_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\warrior\Warrior_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\warrior\warr_motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\Fantasy_laddy_assasin\motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\battle_wizard\wizard_male_motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\Animated_archer\archer_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\battle_wizard\Wizard_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\City_guard\guard_notes.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\animated_knight\knight_motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\warrior\Warrior_animationList.txt" />
+     <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\wizard_motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\City_guard\guard_motiondata.xml" />
+     <None Include="Assets\Seven_Medieaval_Heroes\Animated_archer\motiondata.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Cecil">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -133,4 +146,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>

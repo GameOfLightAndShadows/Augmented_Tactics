@@ -1,0 +1,49 @@
+City Guard
+
+Low polygonal game ready animated model of Medieval City Guard
+
+This character has 28 animations.
+
+Here you can find  animations preview: http://www.youtube.com/watch?v=9elrmUifIuI
+
+Animation list:
+
+1) Guard_looking_around: 0 - 176 fr.,
+ 2) Guard_from_StandingFree_to_Combat: 177 - 197 fr.,
+ 3) Guard_combat_mode: 198 - 248 fr.,
+ 4) Guard_dodge_backwards: 249 - 284 fr.,
+ 5) Guard_dodge_to_left: 285 - 320 fr.,
+ 6) Guard_dodge_to_right: 321 - 356 fr.,
+ 7) Guard_duck_below_high_swing: 357 - 392 fr.,
+ 8) Guard_parry_1: 393 - 428 fr.,
+ 9) Guard_parry_2: 429 - 464 fr.,
+ 10) Guard_parry_from_stright_down: 465 - 500 fr.,
+ 11) Guard_specal_attack_A: 501 - 536 fr.,
+ 12) Guard_specal_attack_B: 537 - 582 fr.,
+ 13) Guard_special_attack_C: 583 - 628 fr.,
+ 14) Guard_swing_left: 629 - 664 fr.,
+ 15) Guard_swing_right: 665 - 700 fr.,
+ 16) Guard_swing_straight_down: 701 - 736 fr.,
+ 17) Guard_thrust: 737 - 772 fr.,
+ 18) Guard_from_Combat_to_StandingFree: 773 - 793 fr.,
+ 19) Guard_pointing_A: 794 - 854 fr.,
+ 20) Guard_salute: 855 - 915 fr.,
+ 21) Guard_StandingFree: 920 - 1020 fr.,
+ 22) Guard_talking: 1021 - 1066 fr.,
+ 23) Guard_use_object: 1067 - 1107 fr.,
+ 24) Guard_yawn: 1108 - 1193 fr.,
+ 25) Guard_run: 1198 - 1220 fr.,
+ 26) Guard_Jump_runing: 1225 - 1265 fr.,
+ 27) Guard_walk: 1269 - 1304 fr.,
+ 28) Guard_Dying: 1310 - 1375 fr.,
+
+Model with halberd has 1,059 polygons, 1,854 triangles and 951 vertexes.
+
+Textures: diffuse, specular, and normals maps. 
+Textures are TIF file format 2048x2048 - body and 1024x1024 - halberd
+
+If you have questions, please mail me: mr.necturus@gmail.com
+
+
+male, character, fantasy, guard, warrior, knight, man, armor, polygonal, video game, wow, rpg, mmo, soldier, military, fps, army, bow, medieval, king, royal 
+

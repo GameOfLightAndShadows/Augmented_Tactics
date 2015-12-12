@@ -1,0 +1,63 @@
+Fantasy Character – Animated Battle Wizard
+
+v. 2.0 Now it is Unity 4 asset.
+Custom shaders was replaced by Unity standard shaders.
+One more staff was added. Now developer can chose in which animation staff on the Wizard's back and in which in the hands.
+Cloak opacity issue was fixed.
+
+Character has 36 animations. 
+
+Here you can see animations preview: http://www.youtube.com/user/MycroSlonik#p/a/u/0/B65VZXNZ6QI
+
+Animation list:
+
+1) MM_combat_mode_A: 0f - 75 fr.,
+ 2) MM_dodge_to_left: 76f - 111 fr.,
+ 3) MM_dodge_to_right: 112f - 147 fr.,
+ 4) MM_magic_helix_spell: 148f - 218 fr.,
+ 5) MM_staf_block: 219f - 254 fr.,
+ 6) MM_staff_earthquake_spell: 255f - 290 fr.,
+ 7) MM_staff_Hit: 291f - 326 fr.,
+ 8) MM_straight_down_hit: 327f - 362 fr.,
+ 9) MM_swing_right: 363f - 398 fr.,
+ 10) MM_taking_hit: 399f - 434 fr.,
+ 11) MM_dying_B: 435f - 500 fr.,
+ 12) MM_combat_mode_B: 505f - 580 fr.,
+ 13) MM_duck_below_swing: 581f - 616 fr.,
+ 14) MM_magic_light_spell: 617f - 667 fr.,
+ 15) MM_magic_shot_stright: 668f - 703 fr.,
+ 16) MM_combat_mode_C: 708f - 783 fr.,
+ 17) MM_buff_spell_A: 784f - 834 fr.,
+ 18) MM_buff_spell_B: 835f - 925 fr.,
+ 19) MM_fire_ball_spell: 926f - 1001 fr.,
+ 20) MM_spell_cast_A: 1002f - 1072 fr.,
+ 21) MM_spell_cast_B: 1073f - 1108 fr.,
+ 22) MM_spell_cast_C: 1109f - 1144 fr.,
+ 23) MM_spell_cast_D: 1145f - 1180 fr.,
+ 24) MM_Dying_A: 1181f - 1221 fr.,
+ 25) MM_StandingFree: 1226f - 1326 fr.,
+ 26) MM_Drinking_potion: 1327f - 1427 fr.,
+ 27) MM_looking_around: 1428f - 1604 fr.,
+ 28) MM_boring: 1605f - 1730 fr.,
+ 29) MM_Shrugs: 1731f - 1776 fr.,
+ 30) MM_Thinking: 1777f - 1852 fr.,
+ 31) MM_Explanation: 1853f - 1903 fr.,
+ 32) MM_making_potion: 1908f - 1938 fr.,
+ 33) MM_Sneaking: 1943f - 1993 fr.,
+ 34) MM_Run: 1998f - 2020 fr.,
+ 35) MM_jump_runing: 2025f - 2065 fr.,
+ 36) MM_walk: 2070f - 2120 fr.,
+
+
+
+Model has 1,275  polygons, 2,374 triangles and 1,283 vertexes.
+
+Textures: diffuse, specular, and normals maps. 
+Textures are TIF file format 2048x2048 for wizard and 1024x1024 for staff.
+
+If you have any question using this model, pleas send it to me. My mail is mr.necturus@gmail.com
+
+
+male, character, fantasy, warrior, wizard, man, armor,  poly, polygonal, video, game, wow, rpg, mmo, soldier, military, fps
+mage, sorcerer, whicher
+

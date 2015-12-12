@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="MM_combat_mode_A" startFrame="0f" endFrame="75f" />
+ <Data id="2" name="MM_dodge_to_left" startFrame="76f" endFrame="111f" />
+ <Data id="3" name="MM_dodge_to_right" startFrame="112f" endFrame="147f" />
+ <Data id="4" name="MM_magic_helix_spell" startFrame="148f" endFrame="218f" />
+ <Data id="5" name="MM_staf_block" startFrame="219f" endFrame="254f" />
+ <Data id="6" name="MM_staff_earthquake_spell" startFrame="255f" endFrame="290f" />
+ <Data id="7" name="MM_staff_Hit" startFrame="291f" endFrame="326f" />
+ <Data id="8" name="MM_straight_down_hit" startFrame="327f" endFrame="362f" />
+ <Data id="9" name="MM_swing_right" startFrame="363f" endFrame="398f" />
+ <Data id="10" name="MM_taking_hit" startFrame="399f" endFrame="434f" />
+ <Data id="11" name="MM_dying_B" startFrame="435f" endFrame="500f" />
+ <Data id="12" name="MM_combat_mode_B" startFrame="505f" endFrame="580f" />
+ <Data id="13" name="MM_duck_below_swing" startFrame="581f" endFrame="616f" />
+ <Data id="14" name="MM_magic_light_spell" startFrame="617f" endFrame="667f" />
+ <Data id="15" name="MM_magic_shot_stright" startFrame="668f" endFrame="703f" />
+ <Data id="16" name="MM_combat_mode_C" startFrame="708f" endFrame="783f" />
+ <Data id="17" name="MM_buff_spell_A" startFrame="784f" endFrame="834f" />
+ <Data id="18" name="MM_buff_spell_B" startFrame="835f" endFrame="925f" />
+ <Data id="19" name="MM_fire_ball_spell" startFrame="926f" endFrame="1001f" />
+ <Data id="20" name="MM_spell_cast_A" startFrame="1002f" endFrame="1072f" />
+ <Data id="21" name="MM_spell_cast_B" startFrame="1073f" endFrame="1108f" />
+ <Data id="22" name="MM_spell_cast_C" startFrame="1109f" endFrame="1144f" />
+ <Data id="23" name="MM_spell_cast_D" startFrame="1145f" endFrame="1180f" />
+ <Data id="24" name="MM_Dying_A" startFrame="1181f" endFrame="1221f" />
+ <Data id="25" name="MM_StandingFree" startFrame="1226f" endFrame="1326f" />
+ <Data id="26" name="MM_Drinking_potion" startFrame="1327f" endFrame="1427f" />
+ <Data id="27" name="MM_looking_around" startFrame="1428f" endFrame="1604f" />
+ <Data id="28" name="MM_boring" startFrame="1605f" endFrame="1730f" />
+ <Data id="29" name="MM_Shrugs" startFrame="1731f" endFrame="1776f" />
+ <Data id="30" name="MM_Thinking" startFrame="1777f" endFrame="1852f" />
+ <Data id="31" name="MM_Explanation" startFrame="1853f" endFrame="1903f" />
+ <Data id="32" name="MM_making_potion" startFrame="1908f" endFrame="1938f" />
+ <Data id="33" name="MM_Sneaking" startFrame="1943f" endFrame="1993f" />
+ <Data id="34" name="MM_Run" startFrame="1998f" endFrame="2020f" />
+ <Data id="35" name="MM_jump_runing" startFrame="2025f" endFrame="2065f" />
+ <Data id="36" name="MM_walk" startFrame="2070f" endFrame="2120f" />
+</Anim>

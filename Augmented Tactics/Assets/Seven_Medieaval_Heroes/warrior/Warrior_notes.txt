@@ -1,0 +1,18 @@
+Low polygonal warrior-swordsman 
+
+
+This hero have 18 animation that cover basic needs for NPC character  
+
+Here you can see full preview of these animations: <a href="http://www.youtube.com/watch?v=ZzS5lwkPZ_k">See it on video!</a>
+
+
+One Warrior model has 1,070 polygons and 1,047 vertexes with weapons.
+
+All textures in .TIF file format. Warrior textures are 1024x1024 px. Weapons textures are  512x512 px.
+
+If you have any question, please mail me: mr.necturus@gmail.com
+
+Enjoy! :)
+
+
+Low polygonal model, warrior, knight, video game, simulation, fantasy, wow, RPG, MMO, swardsman, military, army, soldier, ancient warrior, animated model

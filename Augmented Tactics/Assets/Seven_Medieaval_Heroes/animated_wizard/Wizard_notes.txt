@@ -1,0 +1,59 @@
+Fantasy Character – Animated Wizard
+
+Model has 2298 polygons and 2213 vertexes.
+
+This character has 38 animations. 
+
+Textures: diffuse, specular, and normals maps. 
+
+Textures are TIF file format 2048x2048 for wizard and 1024x1024 for staff.
+
+Here you can see animations preview: http://www.youtube.com/watch?v=jYQCw_9NdsY
+
+Animation list:
+
+1) M_combat_mode_A: 0 - 75 fr.,
+ 2) M_dodge_to_left: 76 - 111 fr.,
+ 3) M_dodge_to_right: 112 - 147 fr.,
+ 4) M_magic_helix_spell: 148 - 218 fr.,
+ 5) M_staf_block: 219 - 254 fr.,
+ 6) M_staff_earthquake_spell: 255 - 290 fr.,
+ 7) M_staff_Hit: 291 - 326 fr.,
+ 8) M_straight_down_hit: 327 - 362 fr.,
+ 9) M_swing_right: 363 - 398 fr.,
+ 10) M_taking_hit: 399 - 434 fr.,
+ 11) M_dying_B: 435 - 500 fr.,
+ 12) M_combat_mode_B: 510 - 585 fr.,
+ 13) M_duck_below_swing: 586 - 621 fr.,
+ 14) M_magic_light_spell: 622 - 672 fr.,
+ 15) M_magic_shot_stright: 673 - 708 fr.,
+ 16) M_combat_mode_C: 713 - 788 fr.,
+ 17) M_buff_spell_A: 789 - 839 fr.,
+ 18) M_buff_spell_B: 840 - 930 fr.,
+ 19) M_fire_ball_spell: 931 - 1006 fr.,
+ 20) M_spell_cast_A: 1007 - 1077 fr.,
+ 21) M_spell_cast_B: 1078 - 1113 fr.,
+ 22) M_spell_cast_C: 1114 - 1149 fr.,
+ 23) M_spell_cast_D: 1150 - 1185 fr.,
+ 24) M_Dying_A: 1186 - 1226 fr.,
+ 25) M_Standing-Free_A: 1231 - 1331 fr.,
+ 26) M_looking_around: 1332 - 1508 fr.,
+ 27) M_Standing-Free_B: 1509 - 1609 fr.,
+ 28) M_Drinking_potion: 1610 - 1690 fr.,
+ 29) M_kiss: 1691 - 1776 fr.,
+ 30) M_making_potion: 1781 - 1811 fr.,
+ 31) M_Run: 1816 - 1838 fr.,
+ 32) M_jump_runing: 1843 - 1883 fr.,
+ 33) M_walk: 1888 - 1938 fr.,
+ 34) M_walking_back: 1943 - 1978 fr.,
+ 35) M_falling_down: 1983 - 2023 fr.,
+ 36) M_run_blow_A: 2028 - 2072 fr.,
+ 37) M_run_blow_B: 2073 - 2117 fr.,
+ 38) M_run_blow_C: 2118 - 2162 fr.,
+
+If you have any question using this model, pleas send it to me. My mail is mr.necturus@gmail.com
+
+
+female, character, fantasy, wizard, woman, armor,  poly, polygonal, video, game, wow, rpg, mmo, soldier, military, fps
+mage, baby, sorcerer, which, beauty, sexy 
+
