@@ -4,7 +4,7 @@ public class MoveCommand :CharacterAction
 {
     private Tile _destTile;
 
-    public MoveCommand(Tile dest)
+    public MoveCommand(IReceiver receiver,Tile dest):base(receiver)
     {
         _destTile = dest;
     }

@@ -158,6 +158,7 @@ public class CharacterBase : CharacterObservable
                 _hasPerformedAtLeastOneMove = false;
                 _isDefending = false;
                 _isRotating = true;
+                cmd = new RotateCommand(null);
                 _cmdManager.CommandStack.Push(cmd);
                 cmd.Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
