@@ -74,7 +74,7 @@ public class CharacterBase : CharacterObservable
                 _isRotating = false;
                 cmd = new MoveCommand(null, null);
                 _cmdManager.CommandStack.Push(cmd);
-                cmd.Execute();
+                ((MoveCommand)cmd).Execute();
                 GameManager.instance.highlightTilesAt(gridPosition, Color.blue, movementPerActionPoint, false);
             }
             else
@@ -103,7 +103,7 @@ public class CharacterBase : CharacterObservable
                 _isRotating = false;
                 cmd = new AttackCommand(null);
                 _cmdManager.CommandStack.Push(cmd);
-                cmd.Execute();
+                ((AttackCommand)cmd).Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
@@ -132,7 +132,7 @@ public class CharacterBase : CharacterObservable
                 _isRotating = false;
                 cmd = new DefendCommand(null);
                 _cmdManager.CommandStack.Push(cmd);
-                cmd.Execute();
+                ((DefendCommand)cmd).Execute(this);
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
@@ -160,7 +160,7 @@ public class CharacterBase : CharacterObservable
                 _isRotating = true;
                 cmd = new RotateCommand(null);
                 _cmdManager.CommandStack.Push(cmd);
-                cmd.Execute();
+                ((RotateCommand)cmd).Execute();
                 //GameManager.instance.highlightTilesAt(gridPosition, Color.red, attackRange);
             }
             else
