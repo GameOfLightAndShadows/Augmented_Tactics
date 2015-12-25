@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequences;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 public abstract class AttackCommandSequence : CommandSequence
 {
@@ -20,7 +20,7 @@ public abstract class AttackCommandSequence : CommandSequence
 
     protected int CalculateDamageReduction(CharacterBase target)
     {
-        return (int) (target.IsOfTypeWizard()
+        return (int)(target.IsOfTypeWizard()
             ? target.Stats.Defense + target.Stats.MagicResist
             : target.Stats.Defense);
     }
@@ -51,7 +51,6 @@ public abstract class AttackCommandSequence : CommandSequence
         human.Animator.SetTrigger(isDefenseBonusActivated ? "Hurt" : "Defense");
         human.Notify();
     }
-
 
     protected bool IsFacingPlayer(ICharacter human)
     {
