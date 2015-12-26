@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="Guard_looking_around" startFrame="0f" endFrame="176f" />
+ <Data id="2" name="Guard_from_StandingFree_to_Combat" startFrame="177f" endFrame="197f" />
+ <Data id="3" name="Guard_combat_mode" startFrame="198f" endFrame="248f" />
+ <Data id="4" name="Guard_dodge_backwards" startFrame="249f" endFrame="284f" />
+ <Data id="5" name="Guard_dodge_to_left" startFrame="285f" endFrame="320f" />
+ <Data id="6" name="Guard_dodge_to_right" startFrame="321f" endFrame="356f" />
+ <Data id="7" name="Guard_duck_below_high_swing" startFrame="357f" endFrame="392f" />
+ <Data id="8" name="Guard_parry_1" startFrame="393f" endFrame="428f" />
+ <Data id="9" name="Guard_parry_2" startFrame="429f" endFrame="464f" />
+ <Data id="10" name="Guard_parry_from_stright_down" startFrame="465f" endFrame="500f" />
+ <Data id="11" name="Guard_specal_attack_A" startFrame="501f" endFrame="536f" />
+ <Data id="12" name="Guard_specal_attack_B" startFrame="537f" endFrame="582f" />
+ <Data id="13" name="Guard_special_attack_C" startFrame="583f" endFrame="628f" />
+ <Data id="14" name="Guard_swing_left" startFrame="629f" endFrame="664f" />
+ <Data id="15" name="Guard_swing_right" startFrame="665f" endFrame="700f" />
+ <Data id="16" name="Guard_swing_straight_down" startFrame="701f" endFrame="736f" />
+ <Data id="17" name="Guard_thrust" startFrame="737f" endFrame="772f" />
+ <Data id="18" name="Guard_from_Combat_to_StandingFree" startFrame="773f" endFrame="793f" />
+ <Data id="19" name="Guard_pointing_A" startFrame="794f" endFrame="854f" />
+ <Data id="20" name="Guard_salute" startFrame="855f" endFrame="915f" />
+ <Data id="21" name="Guard_StandingFree" startFrame="920f" endFrame="1020f" />
+ <Data id="22" name="Guard_talking" startFrame="1021f" endFrame="1066f" />
+ <Data id="23" name="Guard_use_object" startFrame="1067f" endFrame="1107f" />
+ <Data id="24" name="Guard_yawn" startFrame="1108f" endFrame="1193f" />
+ <Data id="25" name="Guard_run" startFrame="1198f" endFrame="1220f" />
+ <Data id="26" name="Guard_Jump_runing" startFrame="1225f" endFrame="1265f" />
+ <Data id="27" name="Guard_walk" startFrame="1269f" endFrame="1304f" />
+ <Data id="28" name="Guard_Dying" startFrame="1310f" endFrame="1375f" />
+</Anim>

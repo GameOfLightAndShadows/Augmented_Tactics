@@ -27,7 +27,7 @@ public class AttackCommand : CharacterAction
         if (caller.Equals(characterToAttack))//To be tested November 20th 2015
             throw new Exception("Cannot harm self");
 
-        Target = characterToAttack as CharacterObservable;
+        Target = characterToAttack;
         if (Target == null)
             return;
         //if (caller is NormalHealer || caller is HardHealer && Target is BaseEnemy)

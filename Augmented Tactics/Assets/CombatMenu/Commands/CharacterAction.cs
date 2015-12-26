@@ -9,6 +9,10 @@
         IsExecuted = false;
     }
 
+    public virtual void Execute()
+    {
+    }
+
     public virtual void Execute(CharacterObservable caller, CharacterObservable chracterToInteractWith)
     {
     }

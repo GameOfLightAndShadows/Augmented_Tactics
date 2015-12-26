@@ -22,6 +22,12 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable
     public Cell OldCoordinates { get; set; }
     public GameObject ObservableGameObject { get; set; }
 
+    protected bool _isAttacking;
+    protected bool _isMoving;
+    protected bool _isRotating;
+    protected bool _isDefending;
+    protected bool _hasPerformedAtLeastOneMove;
+
     public void Attach(ICharacterObserver observer)
     {
         if (observer == null)
@@ -52,5 +58,27 @@ public abstract class CharacterObservable : MonoBehaviour, ICharacterObservable
     // Update is called once per frame
     private void Update()
     {
+        if (Stats.HealthPoints <= 0)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(90, 0, 0));
+            transform.GetComponent<Renderer>().material.color = Color.red;
+        }
+    }
+
+    public virtual void TurnUpdate()
+    {
+        if (!_isAttacking && !_isDefending && !_isMoving && !_isRotating)
+            GameManager.instance.GoToNextCharacter();
+    }
+
+    public virtual void TurnOnGUI()
+    {
+    }
+
+    public void OnGUI()
+    {
+        //display HP
+        Vector3 location = Camera.main.WorldToScreenPoint(transform.position) + Vector3.up * 35;
+        GUI.TextArea(new Rect(location.x, Screen.height - location.y, 30, 20), Stats.HealthPoints.ToString());
     }
 }
