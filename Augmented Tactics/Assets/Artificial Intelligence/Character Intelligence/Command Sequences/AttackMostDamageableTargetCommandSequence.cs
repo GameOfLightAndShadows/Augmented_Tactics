@@ -12,7 +12,15 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
         private bool _isMoveNeeded;
         private bool _isFacingCharacter;
         private bool _isTargetInAttackRange;
-
+        private EnemyBase _selfAsEnemy;
+        private Dictionary<CharacterObservable, bool> _top3State; 
+         
+        public AttackMostDamageableTargetCommandSequence(params CharacterObservable[] humans)
+        {
+            _selfAsEnemy = (EnemyBase)Observable;
+            SelectTarget(humans);
+            EvaluateCommandSequence();
+        }
 
         public override List<Action> MakeCommandSequence()
         {
@@ -29,9 +37,24 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
             throw new NotImplementedException();
         }
 
-        public override void SelectTarget(CharacterObservable[] humans)
+        private List<CharacterObservable> FilterDamageableTargets(CharacterObservable[] targets)
         {
             throw new NotImplementedException();
+        }
+
+        private bool IsNextTurnFavorableWithTarget(CharacterObservable target)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SelectTarget(CharacterObservable[] humans)
+        {
+            var top3 = FilterDamageableTargets(humans);
+            foreach (var target in top3)
+            {
+                var isFavorable = IsNextTurnFavorableWithTarget(target);
+                _top3State.Add(target,isFavorable);
+            }
         }
     }
 }
