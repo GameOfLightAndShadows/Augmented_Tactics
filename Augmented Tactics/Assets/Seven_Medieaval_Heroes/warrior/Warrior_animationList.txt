@@ -1,0 +1,23 @@
+Animation list. (Motion Mixer animation sequences)
+
+1) Warr_cry: 0 – 45 fr.,
+2) Warr_combat_mod: 46 – 106 fr.,
+3) Warr_dead-on-back: 107 – 153 fr.,
+4) Warr_dodge: 154 – 174 fr.,
+5) Warr_daying_belt: 175 – 249 fr.,
+6) Warr_falling_coming_up_basic: 250 – 336 fr.,
+7) Warr_finch_back: 361 – 401 fr.,
+8) Warr_finch_front: 402 – 452 fr.,
+2) Warr_ finch_left: 453 – 493 fr.,
+10) Warr_finch_right: 494 – 534 fr.,
+11) Warr_Up_Down_blow: 535 – 575 fr.,
+12) Warr_Heroic_blow: 576 – 626 fr.,
+13) Warr_right_blow: 627 – 677 fr.,
+14) Warr_shield_blow: 678 – 713 fr.,
+15) Warr_shield_block: 714 – 754 fr.,
+16) Warr_Jump: 755 – 779 fr.,
+17) Warr_run: 784 – 806 fr.,
+18) Warr_staying: 811 – 911 fr.,
+19) Warr_walk: 916 – 951 fr.,
+
+

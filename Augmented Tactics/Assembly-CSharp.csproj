@@ -103,15 +103,35 @@
     <Compile Include="Assets\Managers\GameObjectSpawmer.cs" />
     <Compile Include="Assets\Managers\HealthManager.cs" />
     <Compile Include="Assets\Managers\MapCreatorManager.cs" />
+    <Compile Include="Assets\Managers\TilesManager.cs" />
     <Compile Include="Assets\Map\CellType.cs" />
     <Compile Include="Assets\Map\Creator\CellMapXMLContainer.cs" />
     <Compile Include="Assets\Map\Creator\CellXML.cs" />
     <Compile Include="Assets\Map\Creator\MapSaveLoad.cs" />
     <Compile Include="Assets\Map\GameMap.cs" />
     <Compile Include="Assets\Map\GameMapExtensions.cs" />
+    <Compile Include="Assets\Map\Tiles\Tile.cs" />
+    <Compile Include="Assets\Map\Tiles\TileHighlight.cs" />
+    <Compile Include="Assets\Map\Tiles\TilePath.cs" />
+    <Compile Include="Assets\Map\Tiles\TilePathFinder.cs" />
+    <Compile Include="Assets\Map\Tiles\TileType.cs" />
     <Compile Include="Assets\Observers\ICharacterObservable.cs" />
     <Compile Include="Assets\Observers\ICharacterObserver.cs" />
     <Compile Include="Assets\PrefabHolder.cs" />
+    <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\Wizard_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\Fantasy_laddy_assasin\Assassin_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\warrior\Warrior_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\warrior\warr_motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\Fantasy_laddy_assasin\motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\battle_wizard\wizard_male_motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\Animated_archer\archer_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\battle_wizard\Wizard_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\City_guard\guard_notes.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\animated_knight\knight_motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\warrior\Warrior_animationList.txt" />
+    <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\wizard_motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\City_guard\guard_motiondata.xml" />
+    <None Include="Assets\Seven_Medieaval_Heroes\Animated_archer\motiondata.xml" />
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="M_combat_mode_A" startFrame="0f" endFrame="75f" />
+ <Data id="2" name="M_dodge_to_left" startFrame="76f" endFrame="111f" />
+ <Data id="3" name="M_dodge_to_right" startFrame="112f" endFrame="147f" />
+ <Data id="4" name="M_magic_helix_spell" startFrame="148f" endFrame="218f" />
+ <Data id="5" name="M_staf_block" startFrame="219f" endFrame="254f" />
+ <Data id="6" name="M_staff_earthquake_spell" startFrame="255f" endFrame="290f" />
+ <Data id="7" name="M_staff_Hit" startFrame="291f" endFrame="326f" />
+ <Data id="8" name="M_straight_down_hit" startFrame="327f" endFrame="362f" />
+ <Data id="9" name="M_swing_right" startFrame="363f" endFrame="398f" />
+ <Data id="10" name="M_taking_hit" startFrame="399f" endFrame="434f" />
+ <Data id="11" name="M_dying_B" startFrame="435f" endFrame="500f" />
+ <Data id="12" name="M_combat_mode_B" startFrame="510f" endFrame="585f" />
+ <Data id="13" name="M_duck_below_swing" startFrame="586f" endFrame="621f" />
+ <Data id="14" name="M_magic_light_spell" startFrame="622f" endFrame="672f" />
+ <Data id="15" name="M_magic_shot_stright" startFrame="673f" endFrame="708f" />
+ <Data id="16" name="M_combat_mode_C" startFrame="713f" endFrame="788f" />
+ <Data id="17" name="M_buff_spell_A" startFrame="789f" endFrame="839f" />
+ <Data id="18" name="M_buff_spell_B" startFrame="840f" endFrame="930f" />
+ <Data id="19" name="M_fire_ball_spell" startFrame="931f" endFrame="1006f" />
+ <Data id="20" name="M_spell_cast_A" startFrame="1007f" endFrame="1077f" />
+ <Data id="21" name="M_spell_cast_B" startFrame="1078f" endFrame="1113f" />
+ <Data id="22" name="M_spell_cast_C" startFrame="1114f" endFrame="1149f" />
+ <Data id="23" name="M_spell_cast_D" startFrame="1150f" endFrame="1185f" />
+ <Data id="24" name="M_Dying_A" startFrame="1186f" endFrame="1226f" />
+ <Data id="25" name="M_Standing-Free_A" startFrame="1231f" endFrame="1331f" />
+ <Data id="26" name="M_looking_around" startFrame="1332f" endFrame="1508f" />
+ <Data id="27" name="M_Standing-Free_B" startFrame="1509f" endFrame="1609f" />
+ <Data id="28" name="M_Drinking_potion" startFrame="1610f" endFrame="1690f" />
+ <Data id="29" name="M_kiss" startFrame="1691f" endFrame="1776f" />
+ <Data id="30" name="M_making_potion" startFrame="1781f" endFrame="1811f" />
+ <Data id="31" name="M_Run" startFrame="1816f" endFrame="1838f" />
+ <Data id="32" name="M_jump_runing" startFrame="1843f" endFrame="1883f" />
+ <Data id="33" name="M_walk" startFrame="1888f" endFrame="1938f" />
+ <Data id="34" name="M_walking_back" startFrame="1943f" endFrame="1978f" />
+ <Data id="35" name="M_falling_down" startFrame="1983f" endFrame="2023f" />
+ <Data id="36" name="M_run_blow_A" startFrame="2028f" endFrame="2072f" />
+ <Data id="37" name="M_run_blow_B" startFrame="2073f" endFrame="2117f" />
+ <Data id="38" name="M_run_blow_C" startFrame="2118f" endFrame="2162f" />
+</Anim>

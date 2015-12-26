@@ -7,7 +7,7 @@ public class CommandManager : MonoBehaviour
     public Stack CommandStack { get; set; }
     public ICharacter CurrentCharater { get; set; }
     internal ICharacterActionCommand PreviousAction;
-    private CharacterObservable LastCharacterAttacked;
+    public CharacterObservable LastCharacterAttacked;
 
     public void UpdateCommandStack(ICharacterActionCommand cmd)
     {

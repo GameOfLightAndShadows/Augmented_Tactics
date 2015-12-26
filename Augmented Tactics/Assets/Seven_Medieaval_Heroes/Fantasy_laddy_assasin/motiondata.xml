@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="Run" startFrame="0f" endFrame="22f" />
+ <Data id="2" name="walk" startFrame="27f" endFrame="77f" />
+ <Data id="3" name="Sneaking" startFrame="82f" endFrame="132f" />
+ <Data id="4" name="StandingFree" startFrame="137f" endFrame="237f" />
+ <Data id="5" name="Looking_around" startFrame="238f" endFrame="414f" />
+ <Data id="6" name="wapons_ready" startFrame="415f" endFrame="450f" />
+ <Data id="7" name="combat_mode" startFrame="451f" endFrame="501f" />
+ <Data id="8" name="dodge_backwards" startFrame="502f" endFrame="537f" />
+ <Data id="9" name="dodge_to_left" startFrame="538f" endFrame="573f" />
+ <Data id="10" name="dodge_to_right" startFrame="574f" endFrame="609f" />
+ <Data id="11" name="duck_below_high_swing" startFrame="610f" endFrame="645f" />
+ <Data id="12" name="Hit_from_back" startFrame="646f" endFrame="681f" />
+ <Data id="13" name="Hit_from_front" startFrame="682f" endFrame="717f" />
+ <Data id="14" name="Hit_from_left" startFrame="718f" endFrame="753f" />
+ <Data id="15" name="Hit_from_righ" startFrame="754f" endFrame="789f" />
+ <Data id="16" name="L_swing_mid_left" startFrame="790f" endFrame="825f" />
+ <Data id="17" name="L_swing_mid_right" startFrame="826f" endFrame="861f" />
+ <Data id="18" name="L_thrust_mid" startFrame="862f" endFrame="897f" />
+ <Data id="19" name="R_parry_from_stright_down" startFrame="898f" endFrame="933f" />
+ <Data id="20" name="R_parry_mid_front" startFrame="934f" endFrame="969f" />
+ <Data id="21" name="R_parry_mid_right" startFrame="970f" endFrame="1005f" />
+ <Data id="22" name="R_swing_mid_left" startFrame="1006f" endFrame="1041f" />
+ <Data id="23" name="R_swing_mid_right" startFrame="1042f" endFrame="1077f" />
+ <Data id="24" name="R_thrust_mid" startFrame="1078f" endFrame="1113f" />
+ <Data id="25" name="scissors_bow_01" startFrame="1114f" endFrame="1159f" />
+ <Data id="26" name="stright_dowble_bow_01" startFrame="1160f" endFrame="1205f" />
+ <Data id="27" name="two_stright_jump_bows_01" startFrame="1206f" endFrame="1251f" />
+ <Data id="28" name="windmill_bow_01" startFrame="1252f" endFrame="1295f" />
+ <Data id="29" name="wapons_back" startFrame="1296f" endFrame="1346f" />
+ <Data id="30" name="boring" startFrame="1347f" endFrame="1472f" />
+ <Data id="31" name="Dying_A" startFrame="1477f" endFrame="1542f" />
+ <Data id="32" name="Dying_B" startFrame="1547f" endFrame="1587f" />
+</Anim>

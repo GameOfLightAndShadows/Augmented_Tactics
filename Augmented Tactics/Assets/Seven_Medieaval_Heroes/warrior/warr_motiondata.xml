@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="NPS_Warr_War_cry" startFrame="0f" endFrame="45f" />
+ <Data id="2" name="NPS_Warr_combat_mod" startFrame="46f" endFrame="106f" />
+ <Data id="3" name="NPS_Warr_dead-on-back" startFrame="107f" endFrame="153f" />
+ <Data id="4" name="NPS_Warr_dodge" startFrame="154f" endFrame="174f" />
+ <Data id="5" name="NPS_Warr_dying_belt" startFrame="175f" endFrame="249f" />
+ <Data id="6" name="NPS_Warr_falling_coming_up_basic" startFrame="250f" endFrame="360f" />
+ <Data id="7" name="NPS_Warr_flinch_back" startFrame="361f" endFrame="401f" />
+ <Data id="8" name="NPS_Warr_flinch_front" startFrame="402f" endFrame="452f" />
+ <Data id="9" name="NPS_Warr_flinch_left" startFrame="453f" endFrame="493f" />
+ <Data id="10" name="NPS_Warr_flinch_right" startFrame="494f" endFrame="534f" />
+ <Data id="11" name="NPS_Warr_Up_Down_blow" startFrame="535f" endFrame="575f" />
+ <Data id="12" name="NPS_Warr_Heroic_blow" startFrame="576f" endFrame="626f" />
+ <Data id="13" name="NPS_Warr_right_blow" startFrame="627f" endFrame="677f" />
+ <Data id="14" name="NPS_Warr_shield_blow" startFrame="678f" endFrame="713f" />
+ <Data id="15" name="NPS_Warr_shield_block" startFrame="714f" endFrame="754f" />
+ <Data id="16" name="NPS_Warr_Jump" startFrame="755f" endFrame="779f" />
+ <Data id="17" name="NPS_Warr_run" startFrame="784f" endFrame="806f" />
+ <Data id="18" name="NPS_Warr_staying_01" startFrame="811f" endFrame="911f" />
+ <Data id="19" name="NPS_Warr_walk" startFrame="916f" endFrame="951f" />
+</Anim>

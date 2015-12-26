@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Anim>
+ <Data id="1" name="NPS_arch_taking_arrow" startFrame="0f" endFrame="45f" />
+ <Data id="2" name="NPS_arch_combat_pose" startFrame="45f" endFrame="145f" />
+ <Data id="3" name="NPS_arch_bow_aim" startFrame="145f" endFrame="215f" />
+ <Data id="4" name="NPS_arch_bow_shooting" startFrame="215f" endFrame="270f" />
+ <Data id="5" name="NPS_arch_dead-on-back" startFrame="270f" endFrame="312f" />
+ <Data id="6" name="NPS_arch_falling_coming_up_basic" startFrame="312f" endFrame="422f" />
+ <Data id="7" name="NPS_arch_dodge" startFrame="422f" endFrame="462f" />
+ <Data id="8" name="NPS_arch_flinch" startFrame="462f" endFrame="513f" />
+ <Data id="9" name="NPS_arch_Jump" startFrame="513f" endFrame="537f" />
+ <Data id="10" name="NPS_arch_Looking_around" startFrame="537f" endFrame="637f" />
+ <Data id="11" name="NPS_arch_staying_01" startFrame="637f" endFrame="737f" />
+ <Data id="12" name="NPS_arch_run" startFrame="737f" endFrame="759f" />
+ <Data id="13" name="NPS_arch_step_back" startFrame="759f" endFrame="783f" />
+ <Data id="14" name="NPS_arch_step_forward" startFrame="783f" endFrame="807f" />
+ <Data id="15" name="NPS_arch_step_left" startFrame="807f" endFrame="831f" />
+ <Data id="16" name="NPS_arch_step_right" startFrame="831f" endFrame="855f" />
+ <Data id="17" name="NPS_arch_turn_left_combat" startFrame="855f" endFrame="879f" />
+ <Data id="18" name="NPS_arch_turn_right_combat" startFrame="879f" endFrame="903f" />
+</Anim>
