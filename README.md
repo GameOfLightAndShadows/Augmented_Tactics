@@ -12,4 +12,4 @@ At first, this started as a credited project at school where I had to create a p
 
 If you would like to propose something new, please open an issue and I will review it. I'm sure we can quickly come to an understanding and easily try to add your feature(s) or item(s) in the game. Looking forward to work with all of you !
 
-[![Build Status](https://ci.appveyor.com/project/Kavignon/augmented-tactics.png)](https://ci.appveyor.com/project/Kavignon/augmented-tactics)
+[![Build Status](https://ci.appveyor.com/project/Kavignon/augmented-tactics.png?branch=master)](https://ci.appveyor.com/project/Kavignon/augmented-tactics)
