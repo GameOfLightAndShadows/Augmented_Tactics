@@ -39,12 +39,25 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
 
         private List<CharacterObservable> FilterDamageableTargets(CharacterObservable[] targets)
         {
+            var targetRating = new Dictionary<CharacterObservable,int>();
+            foreach (var target in targets)
+            {
+                var offense = (int)_selfAsEnemy.Stats.Power; //Missing equipment bonus points for power
+                var defense = (int)target.Stats.Defense;     //Missing equipment bonus points for defense
+                targetRating.Add(target,offense-defense);
+            }
+
+            return targetRating.OrderByDescending(key => key.Value).Take(3).Select(kvp => kvp.Key).ToList();
+        }
+
+        private bool CanReachTargetWithinTurns(CharacterObservable target, int numberTurn)
+        {
             throw new NotImplementedException();
         }
 
-        private bool IsNextTurnFavorableWithTarget(CharacterObservable target)
+        private void PredictTargetMoves(CharacterObservable target)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void SelectTarget(CharacterObservable[] humans)
@@ -52,7 +65,7 @@ namespace Assets.Artificial_Intelligence.Character_Intelligence.Command_Sequence
             var top3 = FilterDamageableTargets(humans);
             foreach (var target in top3)
             {
-                var isFavorable = IsNextTurnFavorableWithTarget(target);
+                var isFavorable = CanReachTargetWithinTurns(target,2);
                 _top3State.Add(target,isFavorable);
             }
         }
