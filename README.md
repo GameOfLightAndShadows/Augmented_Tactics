@@ -11,3 +11,5 @@ It is not yet a game. This is where the community can get evolve. Create levels,
 At first, this started as a credited project at school where I had to create a prototype with augmented reality and the voice of the player to create new way to play with mobile devices. But with a limited time frame (3 months) it was only possible to create the prototype with the augmented reality.I'm thinking that the voice could come later in the project. It would be better to have a story and levels before trying to get out of hand with voice detection. 
 
 If you would like to propose something new, please open an issue and I will review it. I'm sure we can quickly come to an understanding and easily try to add your feature(s) or item(s) in the game. Looking forward to work with all of you !
+
+[![Build Status](https://ci.appveyor.com/project/Kavignon/augmented-tactics.png)](https://ci.appveyor.com/project/Kavignon/augmented-tactics)
