@@ -100,15 +100,12 @@
     <Compile Include="Assets\Managers\CommandManager.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
     <Compile Include="Assets\Managers\HealthManager.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\Managers\MapCreatorManager.cs" />
     <Compile Include="Assets\Managers\TilesManager.cs" />
     <Compile Include="Assets\Map\CellType.cs" />
     <Compile Include="Assets\Map\Creator\CellMapXMLContainer.cs" />
     <Compile Include="Assets\Map\Creator\CellXML.cs" />
     <Compile Include="Assets\Map\Creator\MapSaveLoad.cs" />
->>>>>>> 3a3bc130573ab90c53c6cced307a7dc95a0b34dc
     <Compile Include="Assets\Map\GameMap.cs" />
     <Compile Include="Assets\Map\GameMapExtensions.cs" />
     <Compile Include="Assets\Map\Tiles\Tile.cs" />
@@ -118,8 +115,6 @@
     <Compile Include="Assets\Map\Tiles\TileType.cs" />
     <Compile Include="Assets\Observers\ICharacterObservable.cs" />
     <Compile Include="Assets\Observers\ICharacterObserver.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Assets\PrefabHolder.cs" />
     <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\Wizard_notes.txt" />
     <None Include="Assets\Seven_Medieaval_Heroes\Fantasy_laddy_assasin\Assassin_notes.txt" />
@@ -135,7 +130,6 @@
     <None Include="Assets\Seven_Medieaval_Heroes\animated_wizard\wizard_motiondata.xml" />
     <None Include="Assets\Seven_Medieaval_Heroes\City_guard\guard_motiondata.xml" />
     <None Include="Assets\Seven_Medieaval_Heroes\Animated_archer\motiondata.xml" />
->>>>>>> 3a3bc130573ab90c53c6cced307a7dc95a0b34dc
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
